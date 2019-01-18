@@ -23,10 +23,10 @@
       
         <div>
             <ul>
-                <li>01<a href="hello.html">Hello World</a></li>
-                <li>02<a href="prove01.php">Homepage</a></li>
-                <li>03<a href="doesNotExist.html">Shopping Cart</a></li>
-                <li>04<a href="doesNotExist.html">Big Project 1</a></li>
+                <li>01 - <a href="hello.html">Hello World</a></li>
+                <li>02 - <a href="prove01.php">Homepage</a></li>
+                <li>03 - <a href="doesNotExist.html">Shopping Cart</a></li>
+                <li>04 - <a href="doesNotExist.html">Big Project 1</a></li>
             </ul>
       
         </div>
