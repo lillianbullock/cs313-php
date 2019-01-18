@@ -23,7 +23,7 @@
       
         <div>
             <ul>
-                <li><a href="prove01.html">Homepage</a></li>
+                <li><a href="prove01.php">Homepage</a></li>
                 <li><a href="doesNotExist.html">Shopping Cart</a></li>
                 <li><a href="doesNotExist.html">Big Project 1</a></li>
             </ul>
