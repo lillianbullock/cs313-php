@@ -14,11 +14,9 @@
     </head>
     
     <body>
-        <header class="lightbg">
-            <span class="header">Header</span>
-            <br/>
-            <a href="assignments.html">Assignments</a>
-        </header>  
+        <?php require 'header.php'; 
+        make_header('home');
+        ?> 
         <br/>
       
         <div>
