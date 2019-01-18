@@ -14,7 +14,8 @@
     </head>
     
     <body>
-        <?php require 'header.php'; 
+        <?php 
+        require 'header.php'; 
         make_header('assignments');
         ?> 
         
