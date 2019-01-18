@@ -1,6 +1,5 @@
 <?php
 
-if (!function_exists('make_header')) {
 function make_header($page) {
     echo '<header class="lightbg">';
     
@@ -12,12 +11,11 @@ function make_header($page) {
     
     if ($page == 'assignments') {
         echo '<span class="header">Assignments</span><br/>';
-        echo '<a href="prove01.html">Home</a>';
+        echo '<a href="prove01.html">Home</a>  ';
         echo 'Assignments';
     } 
     
     echo '</header>';
-}
 }
 
 ?>
