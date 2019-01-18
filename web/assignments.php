@@ -14,7 +14,10 @@
     </head>
     
     <body>
-        <?php include 'header.html; ?>  
+        <?php require 'header.php'; 
+        make_header('assignments');
+        ?> 
+        
         <br/>
       
         <div>
