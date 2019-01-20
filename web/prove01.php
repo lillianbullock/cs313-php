@@ -26,7 +26,7 @@
                 Dallon Weekes and Ryan Seaman. 
                 They previously were in the band The Brobecks together. The
                 Brobecks was founded by Dallon in 2002, and has been largely
-                inactive since 2009, with an EP released in 2012.
+                inactive since 2009, with an EP released in 2012. <br/>
 
             <img src="https://i.ytimg.com/vi/ieThrn5Ujmg/maxresdefault.jpg"
                  alt="Still from the Modern Day Cain music Video"/>
@@ -37,7 +37,8 @@
             <p class = "lightbg">The duo's first show, that we know of, was an unanounced show 
                 at Emo Nite on Dec 6, 2016. For the next while they teased 
                 fans about the bands existence, with a few other unanounced
-                shows, as well as cryptic tweets. 
+                shows, as well as cryptic tweets. <br/>
+
             
             <img src="https://78.media.tumblr.com/13737e0ede85f9178b3bd803a777785a/tumblr_ov9wnuczhU1s8r8kio3_540.jpg"
                   alt="Ryan playing the drums at a show"/>
