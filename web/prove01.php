@@ -13,7 +13,7 @@
       
     </head>
     
-    <body>
+    <body class = "darkbg">
         <?php require 'header.php'; 
         make_header('home');
         ?> 
