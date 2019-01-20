@@ -29,9 +29,9 @@
                 inactive since 2009, with an EP released in 2012.</p>
 
             <img src="https://i.ytimg.com/vi/ieThrn5Ujmg/maxresdefault.jpg"
-                 alt="Still from the Modern Day Cain music Video" style="width:49%"/>
+                 alt="Still from the Modern Day Cain music Video" style="width:40%"/>
             <img src="https://pbs.twimg.com/media/DNE00-9X0AI_v5y.jpg"
-                 alt="Dallon and Ryan" style="width:49%; float: right"/>
+                 alt="Dallon and Ryan" style="width:40%; float: right"/>
             
             <p>The duo's first show, that we know of, was an unanounced show 
                 at Emo Nite on Dec 6, 2016. For the next while they teased 
