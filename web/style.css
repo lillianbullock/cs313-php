@@ -29,10 +29,10 @@ footer {
 }
 
 img {
-    max-width: 100%;
+    /*max-width: 100%;*/
     height: auto;
     margin: auto;
-    width:49%;
+    width:40%;
 }  
 
 /*table formatting*/
