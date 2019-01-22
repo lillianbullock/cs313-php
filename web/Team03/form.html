@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>About Us</title>
+</head>
+<body>
+   <?php include 'header.php'; ?>
+   <h1>About Us</h1>
+   <p>
+      
+       <form action="" method="post" >
+            Name:<br/>
+                <input type="text" name="name"/><br/>
+            <br/>
+            
+           Email:<br/>
+                <input type="email" name="email"/><br/>
+            <br/>
+                
+            Major:<br/>
+                <input type="radio" name="major" value="CS"/>Computer Science<br/>
+                
+                <input type="radio" name="major" value="WDD"/>Web Design and Development<br/>
+                
+                <input type="radio" name="major" value="CIT"/>Computer Information Technology<br/>
+                
+                <input type="radio" name="major" value="CE"/>Computer Engineering<br/>
+           <br/>
+              
+            Comments: <br/>
+                <textarea rows="4" cols="62" name="comment" style="width:400px"></textarea>             
+              
+            <br/> <br/>
+            <input type="submit" value="Submit"/>
+            <input type="reset"/>
+          </form>
+       
+    </p>
+</body>
+</html>

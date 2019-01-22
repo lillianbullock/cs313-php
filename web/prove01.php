@@ -28,8 +28,6 @@
                 Brobecks was founded by Dallon in 2002, and has been largely
                 inactive since 2009, with an EP released in 2012. <br/>
 
-            <img src="https://i.ytimg.com/vi/ieThrn5Ujmg/maxresdefault.jpg"
-                 alt="Still from the Modern Day Cain music Video"/>
             <img src="https://pbs.twimg.com/media/DNE00-9X0AI_v5y.jpg"
                  alt="Dallon and Ryan"/>
                 </p>
