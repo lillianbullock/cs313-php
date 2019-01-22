@@ -10,17 +10,13 @@
    <p>
       
        <form action="submit.php" method="post" >
-            Name:<br/>
-                <?php echo $_POST["name"]; ?> <br/>
+            Name: <?php echo $_POST["name"]; ?> <br/> <br/>
             
-           Email:<br/>
-                <?php echo "mailto:"; echo $_POST["email"]; ?> <br/>
+           Email: <?php echo "mailto:"; echo $_POST["email"]; ?> <br/> <br/>
                 
-            Major:<br/>
-                <?php echo $_POST["major"]; ?> <br/>
+            Major: <?php echo $_POST["major"]; ?> <br/> <br/>
               
-            Comments: <br/>
-                <?php echo $_POST["comment"]; ?>  <br/>           
+            Comments: <?php echo $_POST["comment"]; ?> <br/> <br/>         
               
             <br/> <br/>
             
