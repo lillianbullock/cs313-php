@@ -4,11 +4,10 @@
    <title>About Us</title>
 </head>
 <body>
-   <?php include 'header.php'; ?>
    <h1>About Us</h1>
    <p>
       
-       <form action="" method="post" >
+       <form action="submit.php" method="post" >
             Name:<br/>
                 <input type="text" name="name"/><br/>
             <br/>
@@ -18,13 +17,17 @@
             <br/>
                 
             Major:<br/>
-                <input type="radio" name="major" value="CS"/>Computer Science<br/>
+                <input type="radio" name="major" 
+                       value="CS"/>Computer Science<br/>
                 
-                <input type="radio" name="major" value="WDD"/>Web Design and Development<br/>
+                <input type="radio" name="major" 
+                       value="WDD"/>Web Design and Development<br/>
                 
-                <input type="radio" name="major" value="CIT"/>Computer Information Technology<br/>
+                <input type="radio" name="major" 
+                       value="CIT"/>Computer Information Technology<br/>
                 
-                <input type="radio" name="major" value="CE"/>Computer Engineering<br/>
+                <input type="radio" name="major" 
+                       value="CE"/>Computer Engineering<br/>
            <br/>
               
             Comments: <br/>
