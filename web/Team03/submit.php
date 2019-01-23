@@ -14,7 +14,13 @@
             
             Email: <?php echo "mailto:"; echo $_POST["email"]; ?> <br/> <br/>
                 
-            Major: <?php echo $_POST["major"]; ?> <br/> <br/>
+            Major: <?php 
+            $majorArr = array("CS" => "Computer Science", 
+                                  "WDD" => "Web Design and Development", 
+                                  "CIT" => "Computer Information Technology", 
+                                  "CE" => "Computer Engineering");
+           
+            echo $majorArr[$_POST["major"]]; ?> <br/> <br/>
               
             Continents Visited: <br/>
            
