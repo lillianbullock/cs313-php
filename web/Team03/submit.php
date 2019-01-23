@@ -18,7 +18,7 @@
               
             Continents Visited: <br/>
            
-            <?  if(isset($_POST['NA']) &&
+            <?php  if(isset($_POST['NA']) &&
                 $_POST['NA'] == 'Yes')
                 {
                     echo "North America <br/>";
@@ -59,7 +59,7 @@
                 {
                     echo "Antarctica <br/>";
                 }
-            
+            ?>
             Comments: <?php echo $_POST["comment"]; ?> <br/> <br/>         
               
            
