@@ -20,9 +20,9 @@
            
             <?php  
            
-            if(!empty($_POST['continents'])) {
+            if(!empty($_POST['continent'])) {
            
-                foreach($_POST['continents'] as $selected) {
+                foreach($_POST['continent'] as $selected) {
                 echo "<p>".$selected ."</p>";
                 }
             }
