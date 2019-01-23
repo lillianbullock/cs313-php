@@ -19,14 +19,23 @@
             Continents Visited: <br/>
            
             <?php  
+            $continentArr = array("NA" => "North America", 
+                                  "SA" => "South America", 
+                                  "E" => "Europe", 
+                                  "As" => "Asia", 
+                                  "Au" => "Australia", 
+                                  "Af" => "Africa", 
+                                  "An" => "Antarctica");
+           
            
             if(!empty($_POST['continent'])) {
-           
                 foreach($_POST['continent'] as $selected) {
-                echo $selected ."<br/>";
+                    echo $continentArr[$selected] ."<br/>";
                 }
             }
             ?>
+           
+            <br/>
             Comments: <?php echo $_POST["comment"]; ?> <br/> <br/>         
               
            
