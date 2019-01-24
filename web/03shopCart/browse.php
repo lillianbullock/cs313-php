@@ -27,7 +27,10 @@
        
         ?>
        
-       
+        <form action='cart.php' method='post'>
+        <button onclick='submit'>Go to Cart</button>
+        </form><br/>
+        
     </div>
 </body>
 </html>
