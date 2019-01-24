@@ -17,7 +17,7 @@
     
         Shardblade 
         <form action="submit.php?add=shardblade" method="post"> 
-            <submit>Add to Cart</submit>    
+            <button onclick="submit">Add to Cart</button>    
         </form>
     
         Shardplate 
