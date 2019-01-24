@@ -7,7 +7,7 @@
    <h1>About Us</h1>
    <p>
       
-       <form action="submit.php" method="post" >
+       <form action="submit.php" method="get" >
             Name:<br/>
                 <input type="text" name="name"/><br/>
             <br/>
