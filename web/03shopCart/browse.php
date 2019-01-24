@@ -11,9 +11,18 @@
    <p>
       
         Mistcloak 
-        <form action="submit.php" method="post"> 
+        <form action="submit.php?add=mistcloak" method="post"> 
             <submit>Add to Cart</submit>    
+        </form>
     
+        Shardblade 
+        <form action="submit.php?add=shardblade" method="post"> 
+            <submit>Add to Cart</submit>    
+        </form>
+    
+        Shardplate 
+        <form action="submit.php?add=shardplate" method="post"> 
+            <submit>Add to Cart</submit>    
         </form>
        
        
