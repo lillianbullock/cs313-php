@@ -13,12 +13,12 @@
     <div>
       
         <?php
-        $_SESSION[$inventory] = array(
+        $_SESSION['inventory'] = array(
             "Mistcloak" => "9.99", 
             "Shardblade" => "234.00", 
             "Shardplate" => "400.00");
        
-        foreach ($_SESSION[$inventory] as $x => $x_val) {
+        foreach ($_SESSION['inventory'] as $x => $x_val) {
             echo $x . " $" . $x_val;
             echo "<form action='add.php?add=" . $x . "' method='post'>";
             echo "<button onclick='submit'>Add to Cart</button>";
