@@ -10,22 +10,19 @@
    <h1>About Us</h1>
    <div>
       
-        Mistcloak 
-        <form action="cart.php?add=mistcloak" method="post"> 
-            <button onclick="submit">Add to Cart</button>     
-        </form>
-    
-       <br/>
+        <?php
+        $_SESSION[$inventory] = array("Mistcloak" => "9.99", 
+                        "Shardblade" => "234.00", 
+                        "Shardplate" => "400.00");
        
-        Shardblade 
-        <form action="cart.php?add=shardblade" method="post"> 
-            <button onclick="submit">Add to Cart</button>    
-        </form>
-    <br/>
-        Shardplate 
-        <form action="cart.php?add=shardplate" method="post"> 
-            <button onclick="submit">Add to Cart</button>     
-        </form>
+        foreach ($_SESSION[$inventory] as $x => $x_val) {
+            echo $x . " $" . $x_val;
+            echo "<form action='cart.php?add=" . $x . "' method='post'>";
+            echo "<button onclick='submit'>Add to Cart</button>";
+            echo "</form><br/>";
+        }
+       
+        ?>
        
        
     </div>
