@@ -13,7 +13,7 @@
             echo "<p> " . $x . " [". $x_val . "]";
         }
        
-       var_dump($_SESSION);
+       //var_dump($_SESSION);
        
        ?>
     </p>
