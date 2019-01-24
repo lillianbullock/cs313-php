@@ -8,24 +8,26 @@
 </head>
 <body>
    <h1>About Us</h1>
-   <p>
+   <div>
       
         Mistcloak 
         <form action="cart.php?add=mistcloak" method="post"> 
             <button onclick="submit">Add to Cart</button>     
         </form>
     
+       <br/>
+       
         Shardblade 
         <form action="cart.php?add=shardblade" method="post"> 
             <button onclick="submit">Add to Cart</button>    
         </form>
-    
+    <br/>
         Shardplate 
         <form action="cart.php?add=shardplate" method="post"> 
             <button onclick="submit">Add to Cart</button>     
         </form>
        
        
-    </p>
+    </div>
 </body>
 </html>
