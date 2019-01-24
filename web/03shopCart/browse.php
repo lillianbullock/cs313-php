@@ -12,7 +12,7 @@
       
         Mistcloak 
         <form action="cart.php?add=mistcloak" method="post"> 
-            <submit>Add to Cart</submit>    
+            <button onclick="submit">Add to Cart</button>     
         </form>
     
         Shardblade 
@@ -22,7 +22,7 @@
     
         Shardplate 
         <form action="cart.php?add=shardplate" method="post"> 
-            <submit>Add to Cart</submit>    
+            <button onclick="submit">Add to Cart</button>     
         </form>
        
        
