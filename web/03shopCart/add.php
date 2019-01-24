@@ -1,6 +1,8 @@
 <?php session_start(); 
 
-$_SESSION['cart'[$_GET[add]]]++;
+$item = $_GET[add]
+
+$_SESSION['cart'[$item]]++;
        
 header("Location: browse.php");
 die();        
