@@ -13,6 +13,8 @@
             echo "<p> " . $x . " [". $x_val . "]";
         }
        
+       var_dump($_SESSION);
+       
        ?>
     </p>
 </body>
