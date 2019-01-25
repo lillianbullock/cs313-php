@@ -21,7 +21,7 @@
         foreach ($_SESSION['inventory'] as $x => $x_val) {
             echo $x . " $" . $x_val;
             echo "<form action='add.php' method='post'>";
-            echo "<input type='hidden' id='add' name='add' value='" . $x. "'>"
+            echo "<input type='hidden' id='add' name='add' value='" . $x. "'>";
             echo "<button onclick='submit'>Add to Cart</button>";
             echo "</form><br/>";
         }
