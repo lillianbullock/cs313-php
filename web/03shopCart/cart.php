@@ -23,12 +23,17 @@
             echo "<td>" . $x_val . "</td>";
             echo "</tr>";
         }
+            
+            // REMOVE FROM CART BUTTON
+            // SUBTOTAL FIELD
        
-       //var_dump($_SESSION);
+       var_dump($_SESSION);
        
        ?>
             
         </table>
+    
+        
     
     </p>
 </body>
