@@ -25,7 +25,7 @@
         foreach ($_SESSION['cart'] as $x => $x_val) {
             echo "<tr>";
             echo "<td>" . $x . "</td>";
-            echo "<td>" . $_SESSION['Inventory'][$x] . "</td>";
+            echo "<td>" . $_SESSION['inventory'][$x] . "</td>";
             echo "<td>" . $x_val . "</td>";
             echo "</tr>";
         }
