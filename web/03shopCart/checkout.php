@@ -3,20 +3,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Cart</title>
+   <title>Checkout</title>
 </head>
 <body>
-   <h1>Cart</h1>
+   <h1>Checkout</h1>
    <div>
     
         
         <form action='confirm.php' method='post'>
-            <input type="text" name="name">
-            <input type="text" name="address">
-            <input type="text" name="address2">
-            <input type="text" name="city">
-            <input type="text" name="state">
-            <input type="text" name="zip">
+            Name: <br/>
+            <input type="text" name="name"> <br/> <br/>
+            Address: <br/>
+            <input type="text" name="address"> <br/>
+            <input type="text" name="address2"> <br/><br/>
+            City: <br/>
+            <input type="text" name="city"> <br/><br/>
+            State: <br/>
+            <input type="text" name="state"> <br/><br/>
+            Zip Code: <br/>
+            <input type="text" name="zip"> <br/><br/>
             
         <button onclick='submit'>Submit</button>
         </form><br/>
