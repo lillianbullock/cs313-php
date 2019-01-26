@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Cart</title>
+   <title>Confirm</title>
 </head>
 <body>
-   <h1>Cart</h1>
+   <h1>Confirm Order</h1>
    <div>
         <table>
             <tr>
@@ -32,13 +32,14 @@
         <?php
             echo htmlspecialchars($_POST['name']) . "<br/>";
             echo htmlspecialchars($_POST['address']) . "<br/>";
-            echo htmlspecialchars($_POST['address2']) . "<br/>";
+            if (isset($_POST['address2'])) {
+                echo htmlspecialchars($_POST['address2']) . "<br/>";
+            }
             echo htmlspecialchars($_POST['city']) . " ";
             echo htmlspecialchars($_POST['state']) . " ";
             echo htmlspecialchars($_POST['zip']) . "<br/>";
         ?>
        
-       // ADDRESS INFO 
        
        <br/>
     
