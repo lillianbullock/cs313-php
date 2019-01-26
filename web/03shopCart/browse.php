@@ -28,11 +28,16 @@
        
         ?>
        
+        <!--
         <form action='cart.php' method='post'>
         <input type="hidden" id="add" name="add" value="$x">
         <button onclick='submit'>Go to Cart</button>
         </form><br/>
-        
+        -->
+
+        <form action='cart.php' method='post'>
+        <button onclick='submit'>Go to Cart</button>
+        </form><br/>
     </div>
 </body>
 </html>

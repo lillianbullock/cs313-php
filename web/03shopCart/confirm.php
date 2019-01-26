@@ -17,13 +17,11 @@
        
        <?php
         foreach ($_SESSION['cart'] as $x => $x_val) {
-            if ($x_val > 0) {
-                echo "<tr>";
-                echo "<td>" . $x . "</td>";
-                echo "<td>" . $_SESSION['inventory'][$x] . "</td>";
-                echo "<td>" . $x_val . "</td>";
-                echo "</tr>";
-            }
+            echo "<tr>";
+            echo "<td>" . $x . "</td>";
+            echo "<td>" . $_SESSION['inventory'][$x] . "</td>";
+            echo "<td>" . $x_val . "</td>";
+            echo "</tr>";
         }
             
             // REMOVE FROM CART BUTTON
@@ -34,9 +32,9 @@
     
         //var_dump($_SESSION);
     
-        <form action='checkout.php' method='post'>
-        <button onclick='submit'>Go to Checkout</button>
-        </form><br/>
+       // ADDRESS INFO 
+       
+       <br/>
     
     </div>
 </body>
