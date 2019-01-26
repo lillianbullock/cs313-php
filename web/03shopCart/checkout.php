@@ -12,16 +12,16 @@
         
         <form action='confirm.php' method='post'>
             Name: <br/>
-            <input type="text" name="name"> <br/> <br/>
+            <input type="text" name="name" value="frog"> <br/> <br/>
             Address: <br/>
-            <input type="text" name="address"> <br/>
+            <input type="text" name="address" value="123 gerard pl"> <br/>
             <input type="text" name="address2"> <br/><br/>
             City: <br/>
-            <input type="text" name="city"> <br/><br/>
+            <input type="text" name="city" value="arad"> <br/><br/>
             State: <br/>
-            <input type="text" name="state"> <br/><br/>
+            <input type="text" name="state"value="AS"> <br/><br/>
             Zip Code: <br/>
-            <input type="text" name="zip"> <br/><br/>
+            <input type="text" name="zip"value="1234"> <br/><br/>
             
         <button onclick='submit'>Submit</button>
         </form><br/>
