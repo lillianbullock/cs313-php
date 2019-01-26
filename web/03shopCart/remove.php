@@ -1,6 +1,6 @@
 <?php session_start(); 
 
-$item = $_POST[add];
+$item = $_POST['rm'];
 
 
 if ($_SESSION['cart'][$item] > 0) {

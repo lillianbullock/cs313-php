@@ -1,6 +1,6 @@
 <?php session_start(); 
 
-$item = $_POST[add];
+$item = $_POST['add'];
 
 $_SESSION['cart'][$item]++;
        

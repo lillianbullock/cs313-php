@@ -11,8 +11,8 @@
         <table>
             <tr>
                 <th>Item</th>
-                <th>Price</th>
                 <th>#</th>
+                <th>Price</th>
             </tr>
        
        <?php
@@ -20,8 +20,16 @@
             if ($x_val > 0) {
                 echo "<tr>";
                 echo "<td>" . $x . "</td>";
-                echo "<td>" . $_SESSION['inventory'][$x] . "</td>";
                 echo "<td>" . $x_val . "</td>";
+                echo "<td>" . $_SESSION['inventory'][$x] . "</td>";
+                
+                echo "<td>";
+                echo "<form action='remove.php' method='post'>";
+                echo "<input type='hidden' id='rm' name='rm' value='" . $x. "'>";
+                echo "<button onclick='submit'>Remove One</button>";
+                echo "</form><br/>";
+                echo "</td>";
+                
                 echo "</tr>";
             }
         }
@@ -32,8 +40,8 @@
             
         </table>
     
-        //var_dump($_SESSION);
-    
+       <?php//var_dump($_SESSION);?>
+        
         <form action='checkout.php' method='post'>
         <button onclick='submit'>Go to Checkout</button>
         </form><br/>

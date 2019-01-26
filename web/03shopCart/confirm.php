@@ -30,8 +30,6 @@
             
         </table>
     
-        <?php//var_dump($_SESSION);?>
-    
        // ADDRESS INFO 
        
        <br/>
