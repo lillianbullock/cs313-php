@@ -32,7 +32,8 @@
         <?php
             echo htmlspecialchars($_POST['name']) . "<br/>";
             echo htmlspecialchars($_POST['address']) . "<br/>";
-            if (isset($_POST['address2'])) {
+            
+            if (isset($_POST['address2'] || $_POST['address2'] == "")) {
                 echo htmlspecialchars($_POST['address2']) . "<br/>";
             }
             echo htmlspecialchars($_POST['city']) . " ";
