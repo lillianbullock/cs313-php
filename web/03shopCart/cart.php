@@ -33,8 +33,17 @@
                 echo "</tr>";
             }
         }
-            
-            // REMOVE FROM CART BUTTON
+          
+        $total = 0;
+        foreach ($_SESSION['cart'] as $x => $x_val) {
+            if ($x_val > 0) {
+                $total += ($x_val * $_SESSION['inventory'][$x]);
+            }
+        }
+        
+        echo "<tr><td><b>Total</b></td><td></td><td>";
+        echo $total;    
+        echo "</td></tr>";
             // SUBTOTAL FIELD
        ?>
             
