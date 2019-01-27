@@ -16,7 +16,7 @@
             </tr>
        
        <?php
-        foreach ($_SESSION['cart'] as $x => $x_val) {
+        foreach($_SESSION['cart'] as $x => $x_val) {
             if ($x_val > 0) {
                 echo "<tr>";
                 echo "<td>" . $x . "</td>";
@@ -51,6 +51,10 @@
     
        <?php//var_dump($_SESSION);?>
         
+        <form action='browse.php' method='post'>
+        <button onclick='submit'>Return to Browse</button>
+        </form><br/>
+       
         <form action='checkout.php' method='post'>
         <button onclick='submit'>Go to Checkout</button>
         </form><br/>

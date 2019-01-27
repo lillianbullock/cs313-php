@@ -23,6 +23,19 @@
             echo "<td>" . $_SESSION['inventory'][$x] . "</td>";
             echo "</tr>";
         }
+        
+        $total = 0;
+        foreach ($_SESSION['cart'] as $x => $x_val) {
+            if ($x_val > 0) {
+                $total += ($x_val * $_SESSION['inventory'][$x]);
+            }
+        }
+        
+            echo "<tr><td><b>Total</b></td><td></td><td>";
+            echo $total;    
+            echo "</td></tr>";
+        ?>
+            
         ?>
             
         </table>
