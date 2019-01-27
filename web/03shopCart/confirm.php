@@ -28,7 +28,7 @@
         </table>
     
        
-        <br/><br/>Address:
+        <br/>Address: <br/>
         <?php
             echo htmlspecialchars($_POST['name']) . "<br/>";
             echo htmlspecialchars($_POST['address']) . "<br/>";
