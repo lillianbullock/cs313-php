@@ -35,10 +35,10 @@
         
         echo '<form action="submit_goal.php">';
         
-        echo 'First name:<br>'
-        echo '<input type="text" name="GOAL_NAME"><br>'
+        echo 'First name:<br>';
+        echo '<input type="text" name="GOAL_NAME"><br>';
         
-        echo 'Frequency:<br>'
+        echo 'Frequency:<br>';
         foreach ($db->query("SELECT value from common_lookup where column_name = 'FREQUENCY_TYPE' AND table_name = 'GOAL';") as $row)
         {
             echo '<input type="radio" name="frequency" value="';
@@ -48,7 +48,7 @@
             echo '<br>';
         }
         
-        echo 'Input Type:<br>'
+        echo 'Input Type:<br>';
         foreach ($db->query("SELECT value from common_lookup where column_name = 'ENTRY_TYPE' AND table_name = 'GOAL';") as $row)
         {
             echo '<input type="radio" name="entry" value="';
