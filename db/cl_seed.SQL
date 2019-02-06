@@ -56,3 +56,20 @@ VALUES
 ( 'GOAL'
 , 'ENTRY_TYPE'
 , 'NUMERICAL');
+
+
+INSERT INTO goal
+( name
+, entry_type
+, frequency_type)
+VALUES
+( 'Scripture Study'
+, (SELECT common_lookup_id from common_lookup 
+   where column_name = 'ENTRY_TYPE'
+   AND   table_name = 'GOAL'
+   AND  value = 'CHECKBOX')
+, (SELECT common_lookup_id from common_lookup 
+   where column_name = 'FREQUENCY_TYPE'
+   AND   table_name = 'GOAL'
+   AND  value = 'DAILY')
+ );
