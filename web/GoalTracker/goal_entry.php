@@ -36,7 +36,7 @@
         echo '<form action="submit_goal.php">';
         
         echo 'Goal name:<br>';
-        echo '<input type="text" name="GOAL_NAME"><br>';
+        echo '<input type="text" name="name"><br>';
         
         echo '<br>Frequency:<br>';
         foreach ($db->query("SELECT value from common_lookup where column_name = 'FREQUENCY_TYPE' AND table_name = 'GOAL';") as $row)
