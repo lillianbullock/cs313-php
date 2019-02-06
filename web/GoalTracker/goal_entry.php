@@ -43,9 +43,10 @@
         {
             echo '<input type="radio" name="frequency" value="';
             echo $row['value'];
+            echo '">';
             //makes string lowercase, and then upercases first letter of each word
             echo ucwords(strtolower($row['value'])); 
-            echo '<br>';
+            echo '<br>\n';
         }
         
         echo 'Input Type:<br>';
