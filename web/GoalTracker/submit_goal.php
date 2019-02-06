@@ -33,35 +33,7 @@
             die();
         }
         
-        echo '<form action="submit_goal.php">';
-        
-        echo 'Goal name:<br>';
-        echo '<input type="text" name="GOAL_NAME"><br>';
-        
-        echo '<br>Frequency:<br>';
-        foreach ($db->query("SELECT value from common_lookup where column_name = 'FREQUENCY_TYPE' AND table_name = 'GOAL';") as $row)
-        {
-            echo '<input type="radio" name="frequency" value="';
-            echo $row['value'];
-            echo '">';
-            //makes string lowercase, and then upercases first letter of each word
-            echo ucwords(strtolower($row['value'])); 
-            echo '<br>';
-        }
-        
-        
-        echo '<br>Input Type:<br>';
-        foreach ($db->query("SELECT value from common_lookup where column_name = 'ENTRY_TYPE' AND table_name = 'GOAL';") as $row)
-        {
-            echo '<input type="radio" name="entry" value="';
-            echo $row['value'];
-            echo '">';
-            //makes string lowercase, and then upercases first letter of each word
-            echo ucwords(strtolower($row['value'])); 
-            echo '<br>';
-        }
-        echo '<input type="submit" value="Submit">';
-        echo '</form>';
+        var_dump($_GET);
         
         ?>
         
