@@ -32,8 +32,28 @@
             echo 'Error!: ' . $ex->getMessage();
             die();
         }
-        
+
         var_dump($_GET);
+
+        $stmt = $db->prepare("INSERT INTO goal
+                            ( name, entry_type, frequency_type)
+                            VALUES ( :name
+                            , (SELECT common_lookup_id from common_lookup 
+                            where column_name = 'ENTRY_TYPE'
+                            AND   table_name = 'GOAL'
+                            AND  value = :entry_type )
+                            , (SELECT common_lookup_id from common_lookup 
+                            where column_name = 'FREQUENCY_TYPE'
+                            AND   table_name = 'GOAL'
+                            AND  value = :frequency_type ) );");
+        // TODO --> does PDO take care of all special chars? Or Do I have to do some management myslef????
+        $stmt->execute(array('name' => $_GET['name']
+                             , 'entry_type' => $_GET['entry']
+                             , 'frequency_type' => $_GET['frequency']));
+        $user = $stmt->fetch();
+        // TODO --> how to know if failed??
+
+        var_dump($user);
         
         ?>
         
