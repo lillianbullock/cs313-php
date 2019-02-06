@@ -53,6 +53,7 @@
         $user = $stmt->fetch();
         // TODO --> how to know if failed??
 
+        echo "heller";
         var_dump($user);
         
         ?>
