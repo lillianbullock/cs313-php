@@ -1,6 +1,8 @@
 <?php
     $page = basename($_SERVER['PHP_SELF']);
 
+    echo '<header>';
+
     if ($page == 'home.php') {
         echo '<b>Home</b>';
     } else {
@@ -8,9 +10,10 @@
     }
 
     if ($page == 'goal_list.php') {
-        echo '<b>Goal List</b>';
+        echo ' <b>Goal List</b>';
     } else {
-        echo '<a href = "GoalTracker/goal_list.php"><b>Goal List</b></a>';
+        echo ' <a href = "GoalTracker/goal_list.php"><b>Goal List</b></a>';
     }
 
+    echo '</header>';
 ?>
