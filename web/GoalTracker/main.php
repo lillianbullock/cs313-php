@@ -40,11 +40,11 @@
             echo '<br/>';
         }
         
-        ?>    
+        echo "<footer>© Brooke Bullock, 2019</footer></body></html>";
+        
+        ?>  
+        
         <br/>
-    
-        
-        
         
       
         <footer>© Brooke Bullock, 2019</footer>
