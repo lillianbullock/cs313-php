@@ -19,12 +19,19 @@
         require 'getDB.php';
         
         // TODO when login is working, add that to the query
+        echo "blargh";
+        
         $stmt = $pdo->prepare('Select g.name, cl.value
                             FROM goal g JOIN access a
                             USING(goal_id)
                             JOIN common_lookup cl
                             ON a.level_type = common_lookup_id;');
+        
+        echo "blue";
+        
         $stmt->execute([$email, $status]);
+        
+        echo "lare";
         $rows = $stmt->fetch();
         
         var_dump($rows);
