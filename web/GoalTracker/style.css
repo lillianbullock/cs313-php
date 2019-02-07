@@ -9,13 +9,15 @@ header {
     margin:auto;
     font-weight: bolder;
     background-color: #88BBFF;
-    font-size:22px
 }
 
 span.header {
-    font-weight: bold;
-    font-size:22px
+    font-size:24px;
 }
+
+
+
+
 
 span.h2 {
     font-weight: bold;
