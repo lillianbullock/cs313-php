@@ -35,6 +35,7 @@
 
         //var_dump($_GET);
 
+        // inserts the received goal
         $stmt = $db->prepare("INSERT INTO goal
                             ( name, entry_type, frequency_type)
                             VALUES ( :name
@@ -46,7 +47,6 @@
                             where column_name = 'FREQUENCY_TYPE'
                             AND   table_name = 'GOAL'
                             AND  value = :frequency_type ) );");
-        // TODO --> does PDO take care of all special chars? Or Do I have to do some management myslef????
         $stmt->execute(array('name' => $_GET['name']
                              , 'entry_type' => $_GET['entry']
                              , 'frequency_type' => $_GET['frequency']));

@@ -38,6 +38,7 @@
         echo 'Goal name:<br>';
         echo '<input type="text" name="name"><br>';
         
+        // gets all the possible frequencies
         echo '<br>Frequency:<br>';
         foreach ($db->query("SELECT value from common_lookup where column_name = 'FREQUENCY_TYPE' AND table_name = 'GOAL';") as $row)
         {
@@ -49,7 +50,7 @@
             echo '<br>';
         }
         
-        
+        // gets all the possible input types
         echo '<br>Input Type:<br>';
         foreach ($db->query("SELECT value from common_lookup where column_name = 'ENTRY_TYPE' AND table_name = 'GOAL';") as $row)
         {
