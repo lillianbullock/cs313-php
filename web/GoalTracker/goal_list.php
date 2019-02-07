@@ -31,7 +31,7 @@
         
         foreach ($rows as $row)
         {
-            echo 'column_name: ' . $row['column_name'];
+            echo 'name: ' . $row['name'];
             echo ' value: ' . $row['value'];
             echo '<br/>';
         }

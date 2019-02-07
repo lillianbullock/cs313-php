@@ -18,7 +18,6 @@
         
         require 'getDB.php';
 
-        
         // this is just a sample thing
         foreach ($db->query('SELECT column_name, value FROM common_lookup') as $row)
         {
@@ -28,6 +27,10 @@
         }
         
         ?>  
+        
+        <form action="/goal_list.php">
+            <input type="submit" value="Goal List">
+        </form> 
         
         <br/>
         
