@@ -28,11 +28,11 @@
         $stmt->execute(array(':person_id' => 1));
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
-        var_dump($rows);
+        //var_dump($rows);
         
         foreach ($rows as $row)
         {
-            echo 'name: ' . $row['name'];
+            echo '<br/> name: ' . $row['name'];
             echo ' value: ' . $row['value'];
             echo '<br/>';
         }
