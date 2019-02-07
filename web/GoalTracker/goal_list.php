@@ -33,6 +33,17 @@
             die();
         }
         
+        // TODO when login is working, add that to the query
+        $stmt = $pdo->prepare('Select g.name, cl.value
+                            FROM goal g JOIN access a
+                            USING(goal_id)
+                            JOIN common_lookup cl
+                            ON a.level_type = common_lookup_id;');
+        $stmt->execute([$email, $status]);
+        $rows = $stmt->fetch();
+        
+        var_dump($rows);
+        
         foreach ($db->query('SELECT column_name, value FROM common_lookup') as $row)
         {
             echo 'column_name: ' . $row['column_name'];

@@ -33,7 +33,7 @@
             die();
         }
 
-        var_dump($_GET);
+        //var_dump($_GET);
 
         $stmt = $db->prepare("INSERT INTO goal
                             ( name, entry_type, frequency_type)
@@ -51,10 +51,9 @@
                              , 'entry_type' => $_GET['entry']
                              , 'frequency_type' => $_GET['frequency']));
         $user = $stmt->fetch();
-        // TODO --> how to know if failed??
+        // TODO --> how to know if failed other than logs?? - some way to tell user it failed?
 
-        echo "<p>heller</p>";
-        var_dump($user);
+        echo "<p>Row inserted</p>";
         
         ?>
         
