@@ -16,7 +16,7 @@
     <body>
         <?php    
         
-        echo 'blue';
+        //echo 'basename($_SERVER['PHP_SELF']);';
         require 'header.php';
 
         require 'GoalTracker/getDB.php';
