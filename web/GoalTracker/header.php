@@ -3,6 +3,8 @@
 
     echo '<header>';
 
+    echo '<span class="header">Goal Tracker</span>';
+
     if ($page == 'home.php') {
         echo '<b>Home</b>';
     } else {
@@ -15,5 +17,5 @@
         echo ' <a href = "GoalTracker/goal_list.php"><b>Goal List</b></a>';
     }
 
-    echo '</header>';
+    echo '</header><br/>';
 ?>
