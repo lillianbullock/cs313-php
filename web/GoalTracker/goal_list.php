@@ -21,18 +21,19 @@
         // TODO when login is working, add that to the query
         echo "blargh";
         
-        $stmt = $pdo->prepare('Select g.name, cl.value
+        $stmt = $db->prepare('Select g.name, cl.value
                             FROM goal g JOIN access a
                             USING(goal_id)
                             JOIN common_lookup cl
-                            ON a.level_type = common_lookup_id;');
+                            ON a.level_type = cl.common_lookup_id
+                            WHERE a.person_id = :person_id;');
         
         echo "blue";
         
-        $stmt->execute([$email, $status]);
+        $stmt->execute(array(':person_id' => 1));
         
         echo "lare";
-        $rows = $stmt->fetch();
+        $rows = $stmt->fetch(PDO::FETCH_ASSOC);
         
         var_dump($rows);
         
