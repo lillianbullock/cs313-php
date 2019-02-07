@@ -16,7 +16,7 @@
     <body>
         <?php    
         
-        //echo 'basename($_SERVER['PHP_SELF']);';
+        echo 'basename($_SERVER['PHP_SELF']);';
         require 'header.php';
 
         require 'getDB.php';
