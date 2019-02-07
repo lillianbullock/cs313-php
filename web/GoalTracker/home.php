@@ -14,7 +14,9 @@
     </head>
     
     <body>
-        <?php         
+        <?php    
+        
+        echo 'blue';
         require 'GoalTracker/header.php';
 
         require 'GoalTracker/getDB.php';
