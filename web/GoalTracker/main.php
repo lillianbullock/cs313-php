@@ -28,7 +28,7 @@
         
         ?>  
         
-        <form action="/goal_list.php">
+        <form action="goal_list.php">
             <input type="submit" value="Goal List">
         </form> 
         
