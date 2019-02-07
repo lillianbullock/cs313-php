@@ -15,9 +15,9 @@
     
     <body>
         <?php         
-        require 'header.php';
-        
-        require 'getDB.php';
+        require 'GoalTracker/header.php';
+
+        require 'GoalTracker/getDB.php';
 
         // this is just a sample thing
         foreach ($db->query('SELECT column_name, value FROM common_lookup') as $row)
