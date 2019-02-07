@@ -20,6 +20,7 @@
 
         require 'getDB.php';
 
+        echo '<div>';
         // this is just a sample thing
         foreach ($db->query('SELECT column_name, value FROM common_lookup') as $row)
         {
@@ -35,7 +36,8 @@
         <form action="/GoalTracker/goal_list.php">
             <input type="submit" value="Goal List">
         </form> 
-        
+        </div>
+
         <br/>
         
         <footer>© Brooke Bullock, 2019</footer>
