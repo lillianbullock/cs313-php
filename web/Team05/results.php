@@ -33,8 +33,6 @@
     $stmt->execute(array(':book' => $book));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    var_dump($rows);
-    
     foreach ($rows as $row)
     {
         echo '<a href="details.php?id=' . $row['id'] . '"><b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b> ' . '</a><br>';

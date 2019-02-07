@@ -15,7 +15,7 @@
     
     <body>
         <?php         
-        
+        require 'header.php';
         
         require 'getDB.php';
 
@@ -29,6 +29,8 @@
         
         ?>  
         
+        
+
         <form action="/GoalTracker/goal_list.php">
             <input type="submit" value="Goal List">
         </form> 

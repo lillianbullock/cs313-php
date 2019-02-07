@@ -15,7 +15,8 @@
     
     <body>
         <?php 
-        
+        require 'header.php';
+
         require 'getDB.php';
         
         // TODO when login is working, add that to the query        

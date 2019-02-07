@@ -4,12 +4,15 @@ CREATE TABLE common_lookup
 ( common_lookup_id	  serial		PRIMARY KEY
 , table_name		  varchar(40)	NOT NULL
 , column_name	      varchar(40)	NOT NULL
-, value		          varchar(40)	NOT NULL
+, value		          varchar(40)	NOT NULL 
+, label               varchar(40)   NOT NULL
 );
 
 CREATE TABLE person 
 ( person_id 	serial	   PRIMARY KEY
-, name 		varchar(40)	   NOT NULL
+, f_name 	varchar(20)	   NOT NULL
+, l_name    varchar(20)    NOT NULL
+, email     varchar(20)    NOT NULL
 );
 
 CREATE TABLE goal
