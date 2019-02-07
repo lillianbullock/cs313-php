@@ -1,8 +1,13 @@
+body {
+    background-color: #EFEFFF;
+}
+
 header {
     font-family: fantasy, arial, 'sans serif';
     text-align:center;
     margin:auto;
     font-weight: bolder;
+    background-color: #88BBFF;
 }
 
 span.header {
