@@ -26,7 +26,7 @@
                             ON a.level_type = cl.common_lookup_id
                             WHERE a.person_id = :person_id;');
         $stmt->execute(array(':person_id' => 1));
-        $rows = $stmt->fetch(PDO::FETCH_ASSOC);
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         var_dump($rows);
         
