@@ -25,12 +25,10 @@
                             JOIN common_lookup cl
                             ON a.level_type = cl.common_lookup_id
                             WHERE a.person_id = :person_id;');
-                
         $stmt->execute(array(':person_id' => 1));
-        
         $rows = $stmt->fetch(PDO::FETCH_ASSOC);
         
-        //var_dump($rows);
+        var_dump($rows);
         
         foreach ($rows as $row)
         {
