@@ -18,24 +18,19 @@
         
         require 'getDB.php';
         
-        // TODO when login is working, add that to the query
-        echo "blargh";
-        
+        // TODO when login is working, add that to the query        
         $stmt = $db->prepare('Select g.name, cl.value
                             FROM goal g JOIN access a
                             USING(goal_id)
                             JOIN common_lookup cl
                             ON a.level_type = cl.common_lookup_id
                             WHERE a.person_id = :person_id;');
-        
-        echo "blue";
-        
+                
         $stmt->execute(array(':person_id' => 1));
         
-        echo "lare";
         $rows = $stmt->fetch(PDO::FETCH_ASSOC);
         
-        var_dump($rows);
+        //var_dump($rows);
         
         foreach ($rows as $row)
         {
