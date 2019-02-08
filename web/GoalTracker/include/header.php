@@ -6,16 +6,21 @@
     // Webpage title
     echo '<span class="title">Goal Tracker</span><br/>', "\n";
 
-    // logged in or nah message
-    echo '<div class="rightFloat">';
-    if (isset($_SESSION['user'])) {
-        echo 'Welcome' , $_SESSION['user']['name'];
-        echo '<a href="logout.php">Logout</a>', "\n";
+    if ($page == 'login.php'){
+        // this is just a placeholder in case I want to put something here
+        echo '<div class="rightFloat"></div>';
     } else {
-        echo 'You are not logged in <br/>';
-        echo '<a href="login.php">Login</a>', "\n";
+        // logged in or nah message
+        echo '<div class="rightFloat">';
+        if (isset($_SESSION['user'])) {
+            echo 'Welcome' , $_SESSION['user']['name'];
+            echo '<a href="logout.php">Logout</a>', "\n";
+        } else {
+            echo 'You are not logged in <br/>';
+            echo '<a href="login.php">Login</a>', "\n";
+        }
+        echo '</div>';
     }
-    echo '</div>';
 
     // ifelse for each part of header 
     // TODO figure out how to get these to centre, but keep the login message
