@@ -15,42 +15,51 @@
     
     <body>
         <?php    
-        
+        require 'include/header.php';
         require 'include/getDB.php';
-        
-        echo '<form action="submit_goal.php">';
-        
-        echo 'Goal name:<br>';
-        echo '<input type="text" name="name"><br>', "\n";
-        
-        // gets all the possible frequencies
-        echo '<br>Frequency:<br>';
-        foreach ($db->query("SELECT value from common_lookup where column_name = 'FREQUENCY_TYPE' AND table_name = 'GOAL';") as $row)
-        {
-            echo '<input type="radio" name="frequency" value="';
-            echo $row['value'];
-            echo '">';
-            //makes string lowercase, and then upercases first letter of each word
-            echo ucwords(strtolower($row['value'])); 
-            echo "<br>\n";
-        }
-        
-        // gets all the possible input types
-        echo '<br>Input Type:<br>';
-        foreach ($db->query("SELECT value from common_lookup where column_name = 'ENTRY_TYPE' AND table_name = 'GOAL';") as $row)
-        {
-            echo '<input type="radio" name="entry" value="';
-            echo $row['value'];
-            echo '">';
-            //makes string lowercase, and then upercases first letter of each word
-            echo ucwords(strtolower($row['value'])); 
-            echo "<br>\n";
-        }
-        echo '<input type="submit" value="Submit">';
-        echo '</form>';
-        
         ?>
-        
+
+        <div class='centre purple'>
+            <form action="submit_goal.php">
+                Goal name:<br>
+                <input type="text" name="name"><br>
+            
+                <br>Frequency:<br>
+                <?php
+                // gets all the possible frequencies
+                foreach ($db->query("SELECT value, label 
+                                    FROM common_lookup 
+                                    WHERE column_name = 'FREQUENCY_TYPE'
+                                    AND table_name = 'GOAL';") as $row)
+                {
+                    echo '<input type="radio" name="frequency" value="';
+                    echo $row['value'];
+                    echo '">';
+                    //makes string lowercase, and then upercases first letter of each word
+                    echo ucwords(strtolower($row['label'])); 
+                    echo "<br>\n";
+                }
+                
+                // gets all the possible input types
+                echo '<br>Input Type:<br>';
+                foreach ($db->query("SELECT value, label 
+                                    FROM common_lookup 
+                                    WHERE column_name = 'ENTRY_TYPE' 
+                                    AND table_name = 'GOAL';") as $row)
+                {
+                    echo '<input type="radio" name="entry" value="';
+                    echo $row['value'];
+                    echo '">';
+                    //makes string lowercase, and then upercases first letter of each word
+                    echo ucwords(strtolower($row['label'])); 
+                    echo "<br>\n";
+                }
+                ?>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
         <?php require 'include/footer.php'; ?>
     </body>
 </html>

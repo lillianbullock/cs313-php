@@ -22,46 +22,46 @@
 
         <div class='centre purple'>
         
-        <?php
-        // TODO when login is working, add that to the query        
-        $stmt = $db->prepare('Select g.goal_id, g.name, cl.label
-                            FROM goal g JOIN access a
-                            USING(goal_id)
-                            JOIN common_lookup cl
-                            ON a.level_type = cl.common_lookup_id
-                            WHERE a.person_id = :person_id;');
-        $stmt->execute(array(':person_id' => 1));
-        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        
-        //var_dump($rows);
-        
-       // Goal table
-        echo "<table class='centre'>";
-        echo "<tr><th>Goal Name</th><th>Permissions</th></tr>";
-
-        foreach ($rows as $row)
-        {
-            echo '<tr><td>';
-
-            echo '<form action="/GoalTracker/goal_view.php" method="POST">';
-            echo '<input type="hidden" id="goal_id" name="goal_id" value="';
-            echo $row['goal_id'];
-            echo '"><input class="purplebutton" type="submit" value="';
-            echo $row['name'];
-            echo '"></form>';
+            <?php
+            // TODO when login is working, add that to the query        
+            $stmt = $db->prepare('Select g.goal_id, g.name, cl.label
+                                FROM goal g JOIN access a
+                                USING(goal_id)
+                                JOIN common_lookup cl
+                                ON a.level_type = cl.common_lookup_id
+                                WHERE a.person_id = :person_id;');
+            $stmt->execute(array(':person_id' => 1));
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
-            echo '</td><td>';
-            echo $row['label'];
-            echo "</td></tr>\n";
-        }
-        
-        echo "</table>";
+            //var_dump($rows);
+            
+        // Goal table
+            echo "<table class='centre'>";
+            echo "<tr><th>Goal Name</th><th>Permissions</th></tr>";
 
-        ?>  
+            foreach ($rows as $row)
+            {
+                echo '<tr><td>';
 
-        <form action="/GoalTracker/goal_entry.php">
-            <input type="submit" value="Add a New Goal">
-        </form> 
+                echo '<form action="/GoalTracker/goal_view.php" method="POST">';
+                echo '<input type="hidden" id="goal_id" name="goal_id" value="';
+                echo $row['goal_id'];
+                echo '"><input class="purplebutton" type="submit" value="';
+                echo $row['name'];
+                echo '"></form>';
+                
+                echo '</td><td>';
+                echo $row['label'];
+                echo "</td></tr>\n";
+            }
+            
+            echo "</table>";
+
+            ?>  
+
+            <form action="/GoalTracker/goal_entry.php">
+                <input type="submit" value="Add a New Goal">
+            </form> 
         
         </div>
 
