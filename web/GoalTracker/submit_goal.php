@@ -15,9 +15,10 @@
     
     <body>
         <?php         
-        require 'getDB.php';
+        require 'include/getDB.php';
 
-
+        require 'include/header.php'; 
+        
         //var_dump($_GET);
 
         // inserts the received goal
@@ -39,26 +40,9 @@
         // TODO --> how to know if failed other than logs?? - some way to tell user it failed?
 
         echo "<p>Row inserted</p>";
-        
         ?>
-        
-        <?php 
-        require 'header.php'; 
-        make_header('assignments');
-        ?> 
-        
-        <br/>
-      
-        <div>
-            <ul>
-                <li>01 - <a href="hello.html">Hello World</a></li>
-                <li>02 - <a href="prove01.php">Homepage</a></li>
-                <li>03 - <a href="03shopCart/browse.php">Shopping Cart</a></li>
-                <li>04 - <a href="doesNotExist.html">Big Project 1</a></li>
-            </ul>
-      
-        </div>
-      
-        <?php require 'footer.php'; ?>
+    
+
+        <?php require 'include/footer.php'; ?>
     </body>
 </html>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang = "en" >
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="include/style.css">
             <meta charset = "utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home</title>
+        <title>Goal List</title>
       
         <!--internal style sheets-->
         <style> </style>
@@ -15,12 +15,12 @@
     
     <body>
         <?php 
-        require 'header.php';
+        require 'include/header.php';
 
-        require 'getDB.php';
+        require 'include/getDB.php';
         
         // TODO when login is working, add that to the query        
-        $stmt = $db->prepare('Select g.name, cl.label
+        $stmt = $db->prepare('Select g.goal_id, g.name, cl.label
                             FROM goal g JOIN access a
                             USING(goal_id)
                             JOIN common_lookup cl
@@ -38,16 +38,26 @@
 
         foreach ($rows as $row)
         {
-            echo '<tr>';
-            echo '<td>' . $row['name']  . '</td>';
-            echo '<td>' . $row['label'] . '</td>';
+            echo '<tr><td>';
+
+            echo '<form action="/GoalTracker/goal_view.php" method="POST">';
+            echo '<input type="hidden" id="goal_id" name="goal_id" value="';
+            echo $row['goal_id'] . '">';
+            echo '<input type="submit" value="';
+            echo $row['name'] . '"></form>';
+            
+            echo '</td><td>' . $row['label'] . '</td>';
             echo '</tr>';
         }
         
         echo "</table></div>";
 
         ?>  
+
+        <form action="/GoalTracker/goal_entry.php">
+            <input type="submit" value="Add a New Goal">
+        </form> 
         
-        <?php require 'footer.php'; ?>
+        <?php require 'include/footer.php'; ?>
     </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en" >
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="include/style.css">
             <meta charset = "utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Home</title>
@@ -15,7 +15,10 @@
     
     <body>
 
-        <?php require 'header.php'; ?>
+        <?php require 'include/header.php'; ?>
+
+        <?php require 'include/getDB.php';
+
 
         <!-- TODO add js to validate this form -->
 
@@ -33,7 +36,6 @@
 
         <?php    
         
-        require 'getDB.php';
         
         echo '<form action="submit_goal.php">';
         
@@ -73,6 +75,6 @@
 
 
 
-        <?php require 'footer.php'; ?>
+        <?php require 'include/footer.php'; ?>
     </body>
 </html>

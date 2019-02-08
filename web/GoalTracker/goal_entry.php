@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang = "en" >
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="include/style.css">
             <meta charset = "utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home</title>
+        <title>Entry</title>
       
         <!--internal style sheets-->
         <style> </style>
@@ -16,7 +16,7 @@
     <body>
         <?php    
         
-        require 'getDB.php';
+        require 'include/getDB.php';
         
         echo '<form action="submit_goal.php">';
         
@@ -51,10 +51,6 @@
         
         ?>
         
-        <br/>
-      
-        
-      
-        <footer>© Brooke Bullock, 2019</footer>
+        <?php require 'include/footer.php'; ?>
     </body>
 </html>
