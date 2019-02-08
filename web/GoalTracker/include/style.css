@@ -34,6 +34,7 @@ table.centre {
 }
 
 form.centre {
+    width: 50%;
     margin:auto;
 }
 
