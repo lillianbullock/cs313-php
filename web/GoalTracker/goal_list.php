@@ -31,7 +31,7 @@
         
         //var_dump($rows);
         
-        echo "<div class='centre'>";
+        echo "<div class='centre purple'>";
 
         foreach ($rows as $row)
         {
