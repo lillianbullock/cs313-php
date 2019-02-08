@@ -17,7 +17,7 @@
         echo ' <a href = "GoalTracker/goal_list.php"><b>Goal List</b></a>';
     }
 
-    echo '<div align=rightFloat>';
+    echo '<div class="rightFloat>"';
     if (isset($_SESSION['user'])) {
         echo 'Welcome' . $_SESSION['user']['name'];
     } else {
