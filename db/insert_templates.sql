@@ -57,8 +57,8 @@ VALUES
 , (SELECT goal_id 
   FROM goal
   WHERE name = 'Scripture Study')
-, (SELECT common_lookup_id from common_lookup 
-   where column_name = 'LEVEL_TYPE'
+, (SELECT common_lookup_id FROM common_lookup 
+   WHERE column_name = 'LEVEL_TYPE'
    AND   table_name = 'ACCESS'
    AND  value = 'OWNER')
 );
@@ -72,17 +72,11 @@ ON a.level_type = common_lookup_id;
 
 
 
- INSERT INTO goal_access
-( person_id
-, goal_id
-, level_type)
+ INSERT INTO goal_entry
+( goal_id
+, input
+, timestamp)
 VALUES
-( (SELECT person_id from person 
-   where name = :name
-   AND   table_name = 'GOAL'
-   AND  value = 'CHECKBOX')
-, (SELECT common_lookup_id from common_lookup 
-   where column_name = 'FREQUENCY_TYPE'
-   AND   table_name = 'GOAL'
-   AND  value = 'DAILY')
- );
+( :goal_id
+, :input
+, NOW() );

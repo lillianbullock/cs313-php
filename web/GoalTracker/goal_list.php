@@ -18,7 +18,11 @@
         require 'include/header.php';
 
         require 'include/getDB.php';
+        ?>
+
+        <div class='centre purple'>
         
+        <?php
         // TODO when login is working, add that to the query        
         $stmt = $db->prepare('Select g.goal_id, g.name, cl.label
                             FROM goal g JOIN access a
@@ -31,8 +35,7 @@
         
         //var_dump($rows);
         
-        echo "<div class='centre purple'>";
-
+       // Goal table
         echo "<table class='centre'>";
         echo "<tr><th>Goal Name</th><th>Permissions</th></tr>";
 
@@ -43,14 +46,14 @@
             echo '<form action="/GoalTracker/goal_view.php" method="POST">';
             echo '<input type="hidden" id="goal_id" name="goal_id" value="';
             echo $row['goal_id'] . '">';
-            echo '<input type="submit" value="';
+            echo '<input class="purplebutton" type="submit" value="';
             echo $row['name'] . '"></form>';
             
             echo '</td><td>' . $row['label'] . '</td>';
             echo '</tr>';
         }
         
-        echo "</table></div>";
+        echo "</table>";
 
         ?>  
 
@@ -58,6 +61,8 @@
             <input type="submit" value="Add a New Goal">
         </form> 
         
+        </div>
+
         <?php require 'include/footer.php'; ?>
     </body>
 </html>

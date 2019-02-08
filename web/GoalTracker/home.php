@@ -25,7 +25,8 @@
 
         <?php
         // this is just a sample thing
-        foreach ($db->query('SELECT column_name, value FROM common_lookup') as $row)
+        foreach ($db->query('SELECT column_name, value 
+                             FROM common_lookup') as $row)
         {
             echo 'column_name: ' . $row['column_name'];
             echo ' value: ' . $row['value'];
