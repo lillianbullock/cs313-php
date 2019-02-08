@@ -15,9 +15,7 @@
     
     <body>
         <?php    
-        
         require 'include/header.php';
-
         require 'include/getDB.php';
         ?>
         

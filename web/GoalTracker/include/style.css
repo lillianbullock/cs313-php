@@ -44,9 +44,12 @@ footer {
     background-color: #B28FDC;
     border: none;
     text-align: center;
-    
 }
 
+div.rightFloat {
+    float: right;
+    width: 20%
+}
 
 /*table formatting*/
 table {
@@ -62,10 +65,10 @@ table.centre {
     margin:auto;
 }
 
-div.rightFloat {
-    float: right;
-    width: 20%
-}
+
+
+
+
 
 
 
