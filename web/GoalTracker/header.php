@@ -3,7 +3,7 @@
 
     echo '<header>';
 
-    echo '<span class="header">Goal Tracker</span><br/>';
+    echo '<span class="header l-blue">Goal Tracker</span><br/>';
 
     if ($page == 'home.php') {
         echo '<b>Home</b>';

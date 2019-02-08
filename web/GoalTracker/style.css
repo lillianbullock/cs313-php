@@ -9,20 +9,27 @@ header {
     text-align:center;
     
     margin:auto;
-    background-color: #88BBFF;
     width: 75%;
+    padding: 10px;
+
 }
 
 span.header {
     font-size:24px;
 }
 
+.l-blue {
+    background-color: #88BBFF;
+}
+
+.purple {
+    background-color: #B28FDC;
+}
 
 div.centre {
     margin: auto;
     width: 75%;
     padding: 10px;
-    background-color: #B28FDC;
 }
 
 
@@ -31,13 +38,12 @@ span.h2 {
     font-size:18px;
 }
 
-.lightbg {
-    background-color:#eeeeff;
-}
 
-.darkbg {
-    background-color: #99bbff
-}
+
+
+
+
+
 
 footer {
     padding-top: 20px;
