@@ -38,8 +38,6 @@
         </form> 
         </div>
 
-        <br/>
-        
-        <footer>© Brooke Bullock, 2019</footer>
+        <?php require 'footer.php'; ?>
     </body>
 </html>
