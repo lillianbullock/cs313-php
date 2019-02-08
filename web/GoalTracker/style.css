@@ -52,7 +52,10 @@ table.centre {
     margin:auto;
 }
 
-
+div.rightFloat {
+    float: right;
+    width: 20%
+}
 
 
 
