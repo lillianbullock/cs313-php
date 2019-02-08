@@ -3,10 +3,21 @@
 
     echo '<header class="l-blue">';
 
+    // Webpage title
     echo '<span class="title">Goal Tracker</span><br/>';
 
-    echo '<div class="centre">';
+
+    // logged in or nah message
+    echo '<div class="rightFloat">';
+    if (isset($_SESSION['user'])) {
+        echo 'Welcome' . $_SESSION['user']['name'];
+    } else {
+        echo 'You are not logged in';
+    }
+    echo '</div>';
+
     // ifelse for each part of header 
+    echo '<div class="centre">';
     if ($page == 'home.php') {
         echo '<b>Home</b>';
     } else {
@@ -20,14 +31,7 @@
     }
     echo '</div>';
 
-    // gogged in or nah message
-    echo '<div class="rightFloat">';
-    if (isset($_SESSION['user'])) {
-        echo 'Welcome' . $_SESSION['user']['name'];
-    } else {
-        echo 'You are not logged in';
-    }
-    echo '</div>';
+    
 
     echo '</header><br/>';
 ?>
