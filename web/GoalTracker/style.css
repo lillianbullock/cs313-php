@@ -16,7 +16,11 @@ span.header {
 }
 
 
-
+div.centre {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
 
 
 span.h2 {

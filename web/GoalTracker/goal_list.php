@@ -31,6 +31,8 @@
         
         //var_dump($rows);
         
+        echo "<div class='centre'>";
+
         foreach ($rows as $row)
         {
             echo '<br/> name: ' . $row['name'];
@@ -38,6 +40,8 @@
             echo '<br/>';
         }
         
+        echo "</div>"
+
         ?>  
         
         <br/>
