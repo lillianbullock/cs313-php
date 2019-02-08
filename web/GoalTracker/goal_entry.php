@@ -20,7 +20,7 @@
         ?>
 
         <div class='centre purple'>
-            <form action="submit_goal.php">
+            <form action="submit_goal.php" class="centre">
                 Goal name:<br>
                 <input type="text" name="name"><br>
             
@@ -56,7 +56,7 @@
                 }
                 ?>
 
-                <input type="submit" value="Submit">
+                <br/><input type="submit" value="Submit">
             </form>
         </div>
 
