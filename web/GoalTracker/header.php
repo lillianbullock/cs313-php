@@ -1,9 +1,9 @@
 <?php
     $page = basename($_SERVER['PHP_SELF']);
 
-    echo '<header>';
+    echo '<header class="l-blue">';
 
-    echo '<span class="header l-blue">Goal Tracker</span><br/>';
+    echo '<span class="title">Goal Tracker</span><br/>';
 
     if ($page == 'home.php') {
         echo '<b>Home</b>';
