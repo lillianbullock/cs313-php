@@ -39,8 +39,8 @@
         foreach ($rows as $row)
         {
             echo '<tr>';
-            echo '<td>name: ' . $row['name'] . '</td>';
-            echo '<td>value: ' . $row['label'] . '</td>';
+            echo '<td>' . $row['name']  . '</td>';
+            echo '<td>' . $row['label'] . '</td>';
             echo '</tr>';
         }
         

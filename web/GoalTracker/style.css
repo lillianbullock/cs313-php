@@ -32,30 +32,11 @@ div.centre {
     padding: 10px;
 }
 
-
-span.h2 {
-    font-weight: bold;
-    font-size:18px;
-}
-
-
-
-
-
-
-
-
 footer {
     padding-top: 20px;
     font-size: 15px;
 }
 
-img {
-    /*max-width: 100%;*/
-    height: auto;
-    margin: auto;
-    width:40%;
-}  
 
 /*table formatting*/
 table {
@@ -66,10 +47,29 @@ table, th, td {
     border: 1px solid black;
 }
 
+table.centre {
+    margin:auto;
+}
+
+
+
+
+
+
+
 p {
     margin-top: 0;
 }
 
-.centre {
-    margin:auto;
+span.h2 {
+    font-weight: bold;
+    font-size:18px;
 }
+
+
+img {
+    /*max-width: 100%;*/
+    height: auto;
+    margin: auto;
+    width:40%;
+}  
