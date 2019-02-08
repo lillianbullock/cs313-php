@@ -18,7 +18,7 @@
     }
 
     echo '<div align=left>';
-    if (is_set($_SESSION['user'])) {
+    if (isset($_SESSION['user'])) {
         echo 'Welcome' . $_SESSION['user']['name'];
     } else {
         echo 'You are not logged in';
