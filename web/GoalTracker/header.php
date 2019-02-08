@@ -17,6 +17,7 @@
     echo '</div>';
 
     // ifelse for each part of header 
+    // TODO figure out how to get these to centre, but keep the login message
     echo '<div class="centre">';
     if ($page == 'home.php') {
         echo '<b>Home</b>';
@@ -30,8 +31,6 @@
         echo ' <a href = "goal_list.php"><b>Goal List</b></a>';
     }
     echo '</div>';
-
-    
 
     echo '</header><br/>';
 ?>
