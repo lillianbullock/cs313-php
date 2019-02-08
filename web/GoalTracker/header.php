@@ -11,7 +11,7 @@
     echo '<div class="rightFloat">';
     if (isset($_SESSION['user'])) {
         echo 'Welcome' . $_SESSION['user']['name'];
-        echo '<a href="logout.php">Logout</a>'
+        echo '<a href="logout.php">Logout</a>';
     } else {
         echo 'You are not logged in <br/>';
         echo '<a href="login.php">Login</a>'

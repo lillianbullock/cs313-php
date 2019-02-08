@@ -18,7 +18,7 @@
         
         require 'header.php';
 
-        require 'getDB.php';
+        /*require 'getDB.php';
 
         echo '<div class="centre purple">';
         // this is just a sample thing
@@ -27,7 +27,7 @@
             echo 'column_name: ' . $row['column_name'];
             echo ' value: ' . $row['value'];
             echo '<br/>';
-        }
+        }*/
         
         ?>  
         
