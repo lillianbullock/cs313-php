@@ -15,9 +15,8 @@
     
     <body>
 
-        <?php require 'include/header.php'; ?>
-
-        <?php require 'include/getDB.php';
+        <?php require 'include/header.php'; 
+            require 'include/getDB.php'; ?>
 
 
         <!-- TODO add js to validate this form -->
@@ -34,8 +33,8 @@
             </form>
         </div>
 
-        <?php    
         
+        <?php    
         
         echo '<form action="submit_goal.php">';
         

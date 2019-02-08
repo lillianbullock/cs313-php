@@ -37,6 +37,14 @@ footer {
     font-size: 15px;
 }
 
+.button {
+    background-color: #6F2DBD;
+    border: none;
+    color: white;
+    text-align: center;
+    
+}
+
 
 /*table formatting*/
 table {
