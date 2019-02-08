@@ -1,4 +1,4 @@
 <?php
     echo '<br/>';
-    echo '<footer class = "centre">© Brooke Bullock, 2019</footer>';
+    echo '<footer><div class = "centre">© Brooke Bullock, 2019</div></footer>';
 ?>
