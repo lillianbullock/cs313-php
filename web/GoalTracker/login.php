@@ -50,7 +50,7 @@
             echo '">';
             //makes string lowercase, and then upercases first letter of each word
             echo ucwords(strtolower($row['value'])); 
-            echo '<br>';
+            echo "<br>\n";
         }
         
         // gets all the possible input types
@@ -62,7 +62,7 @@
             echo '">';
             //makes string lowercase, and then upercases first letter of each word
             echo ucwords(strtolower($row['value'])); 
-            echo '<br>';
+            echo "<br>\n";
         }
         echo '<input type="submit" value="Submit">';
         echo '</form>';

@@ -28,7 +28,7 @@
         {
             echo 'column_name: ' . $row['column_name'];
             echo ' value: ' . $row['value'];
-            echo '<br/>';
+            echo "<br/>\n";
         }
         ?>  
         

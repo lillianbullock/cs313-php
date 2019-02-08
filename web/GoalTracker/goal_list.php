@@ -45,12 +45,14 @@
 
             echo '<form action="/GoalTracker/goal_view.php" method="POST">';
             echo '<input type="hidden" id="goal_id" name="goal_id" value="';
-            echo $row['goal_id'] . '">';
-            echo '<input class="purplebutton" type="submit" value="';
-            echo $row['name'] . '"></form>';
+            echo $row['goal_id'];
+            echo '"><input class="purplebutton" type="submit" value="';
+            echo $row['name'];
+            echo '"></form>';
             
-            echo '</td><td>' . $row['label'] . '</td>';
-            echo '</tr>';
+            echo '</td><td>';
+            echo $row['label'];
+            echo "</td></tr>\n";
         }
         
         echo "</table>";
