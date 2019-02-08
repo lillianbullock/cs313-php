@@ -3,7 +3,7 @@
 
     echo '<header>';
 
-    echo '<span class="header">Goal Tracker</span><br/>\n';
+    echo '<span class="header">Goal Tracker</span><br/>';
 
     if ($page == 'home.php') {
         echo '<b>Home</b>';
@@ -17,5 +17,5 @@
         echo ' <a href = "GoalTracker/goal_list.php"><b>Goal List</b></a>';
     }
 
-    echo '</header><br/>\n';
+    echo '</header><br/>';
 ?>

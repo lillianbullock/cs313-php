@@ -20,7 +20,7 @@
         require 'getDB.php';
         
         // TODO when login is working, add that to the query        
-        $stmt = $db->prepare('Select g.name, cl.value
+        $stmt = $db->prepare('Select g.name, cl.label
                             FROM goal g JOIN access a
                             USING(goal_id)
                             JOIN common_lookup cl
@@ -34,7 +34,7 @@
         foreach ($rows as $row)
         {
             echo '<br/> name: ' . $row['name'];
-            echo ' value: ' . $row['value'];
+            echo ' value: ' . $row['label'];
             echo '<br/>';
         }
         
