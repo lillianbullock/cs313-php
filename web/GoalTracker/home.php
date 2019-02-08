@@ -20,7 +20,7 @@
 
         require 'getDB.php';
 
-        echo '<div>';
+        echo '<div class="centre purple">';
         // this is just a sample thing
         foreach ($db->query('SELECT column_name, value FROM common_lookup') as $row)
         {
