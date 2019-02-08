@@ -29,7 +29,11 @@ span.title {
     background-color: #B28FDC;
 }
 
-.centre {
+table.centre {
+    margin:auto;
+}
+
+form.centre {
     margin:auto;
 }
 
