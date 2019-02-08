@@ -14,7 +14,7 @@
         echo '<a href="logout.php">Logout</a>';
     } else {
         echo 'You are not logged in <br/>';
-        echo '<a href="login.php">Login</a>'
+        echo '<a href="login.php">Login</a>';
     }
     echo '</div>';
 
