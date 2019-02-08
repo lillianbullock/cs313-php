@@ -15,9 +15,9 @@
     
     <body>
 
-        <?php require 'include/header.php'; 
+        <?php 
+            require 'include/header.php'; 
             require 'include/getDB.php'; ?>
-
 
         <!-- TODO add js to validate this form -->
 
