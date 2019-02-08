@@ -17,5 +17,13 @@
         echo ' <a href = "GoalTracker/goal_list.php"><b>Goal List</b></a>';
     }
 
+    echo '<div align=left>';
+    if (is_set($_SESSION['user'])) {
+        echo 'Welcome' . $_SESSION['user']['name'];
+    } else {
+        echo 'You are not logged in';
+    }
+    echo '</div>';
+
     echo '</header><br/>';
 ?>
