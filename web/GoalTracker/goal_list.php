@@ -33,14 +33,18 @@
         
         echo "<div class='centre purple'>";
 
+        echo "<table class='centre'>";
+        echo "<tr><th>Goal Name</th><th>Permissions</th></tr>";
+
         foreach ($rows as $row)
         {
-            echo '<br/> name: ' . $row['name'];
-            echo ' value: ' . $row['label'];
-            echo '<br/>';
+            echo '<tr>';
+            echo '<tr>name: ' . $row['name'] . '</tr>';
+            echo '<tr>value: ' . $row['label'] . '</tr>';
+            echo '</tr>';
         }
         
-        echo "</div>"
+        echo "</table></div>";
 
         ?>  
         
