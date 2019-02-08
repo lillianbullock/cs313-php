@@ -5,6 +5,7 @@
 
     echo '<span class="title">Goal Tracker</span><br/>';
 
+    // ifelse for each part of header 
     if ($page == 'home.php') {
         echo '<b>Home</b>';
     } else {
@@ -17,7 +18,8 @@
         echo ' <a href = "GoalTracker/goal_list.php"><b>Goal List</b></a>';
     }
 
-    echo '<div class="rightFloat>"';
+    // gogged in or nah message
+    echo '<div class="rightFloat">';
     if (isset($_SESSION['user'])) {
         echo 'Welcome' . $_SESSION['user']['name'];
     } else {
