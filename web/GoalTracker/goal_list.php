@@ -9,7 +9,7 @@
         <!--internal style sheets-->
         <style> </style>
 
-        <script src=prove01.js> </script>
+        <!-- <script src=prove01.js> </script> -->
           
     </head>
     
