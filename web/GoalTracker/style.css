@@ -5,10 +5,12 @@ body {
 
 header {
     font-family: fantasy, arial, 'sans serif';
-    text-align:center;
-    margin:auto;
     font-weight: bolder;
+    text-align:center;
+    
+    margin:auto;
     background-color: #88BBFF;
+    width: 75%;
 }
 
 span.header {
@@ -18,7 +20,7 @@ span.header {
 
 div.centre {
     margin: auto;
-    width: 50%;
+    width: 75%;
     padding: 10px;
     background-color: #B28FDC;
 }
