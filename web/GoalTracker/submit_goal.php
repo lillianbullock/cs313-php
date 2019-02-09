@@ -18,8 +18,8 @@
         require 'include/getDB.php';
         require 'include/header.php'; 
         
-        //var_dump($_GET);
-
+        var_dump($_POST);
+        
         // inserts the received goal
         $stmt = $db->prepare("INSERT INTO goal
                             ( name, entry_type, frequency_type)
