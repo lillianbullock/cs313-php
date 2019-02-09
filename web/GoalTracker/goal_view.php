@@ -28,8 +28,10 @@
             $stmt->execute(array('goal_id' => $_POST['goal_id']));
             $goal_name  = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+            var_dump($goal_name);
+
             echo '<h1>';
-            echo $goal_name;
+            echo $goal_name['name'];
             echo '</h1>';
 
             $stmt = $db->prepare('SELECT g_entry_id, input, timestamp
