@@ -38,10 +38,13 @@
         $user = $stmt->fetch();
         // TODO --> how to know if failed other than logs?? - some way to tell user it failed?
         // TODO --> query to get goal_id and add access to person logged in
-
-        echo "<p>Row inserted</p>";
         ?>
-    
+
+        <div class='centre purple'>
+            Row inserted
+        </div>
+
+
 
         <?php require 'include/footer.php'; ?>
     </body>
