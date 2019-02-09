@@ -36,6 +36,8 @@
             //var_dump($rows);
             
         // Goal table
+
+        // TODO add frequency and type to this table
             echo "<table class='centre'>";
             echo "<tr><th>Goal Name</th><th>Permissions</th></tr>";
 
@@ -59,7 +61,7 @@
 
             ?>  
 
-            <form action="/GoalTracker/goal_entry.php">
+            <form action="/GoalTracker/create_goal.php">
                 <input type="submit" value="Add a New Goal">
             </form> 
         

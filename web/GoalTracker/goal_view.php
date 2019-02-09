@@ -20,8 +20,8 @@
         ?>
 
         <div class='centre purple'>
-        <?php
-            
+            <?php
+                
             $stmt = $db->prepare('SELECT g_entry_id, input, timestamp
                                     FROM goal_entry ge
                                     WHERE goal_id = :goal_id;');
@@ -36,9 +36,9 @@
                 echo '<tr><td>';
                 // TODO entry_edit to be made later
                 echo '<form action="/GoalTracker/entry_edit.php" method="POST">';
-                echo '<input type="hidden" id="goal_id" name="goal_id" value="';
+                echo '<input type="hidden" name="goal_id" value="';
                 echo $_POST['goal_id'];
-                echo '"><input type="hidden" id="entry_id" name="entry_id" value="';
+                echo '"><input type="hidden" name="entry_id" value="';
                 echo $row['g_entry_id'];
                 echo '"><input class="purplebutton" type="submit" value="';
                 echo $row['input'];
@@ -48,10 +48,39 @@
             }
 
             echo "</table>";
+            ?>
 
-            // TODO add 'delete goal' button - have confirmation 
+            <!-- TODO create a create_entry & insert_entry -->
+            <form action="/GoalTracker/create_entry.php" method="POST">
+                <?php
+                echo '<input type="hidden" name="goal_id" value="';
+                echo $_POST['goal_id'];
+                echo '">';
+                ?>
+                <input type="submit" value="Add a New Entry">
+            </form> 
 
-        ?>
+            <!-- TODO create a give_access & insert_access -->
+            <form action="/GoalTracker/give_access.php" method="POST">
+                <?php
+                echo '<input type="hidden" name="goal_id" value="';
+                echo $_POST['goal_id'];
+                echo '">';
+                ?>
+                <input type="submit" value="Share">
+            </form> 
+
+            <!-- TODO create a delete_goal -->
+            <!-- should have a 'yes I understand that I am deleting literally everything' checkbox-->
+            <form action="/GoalTracker/delete_goal.php" method="POST">
+                <?php
+                echo '<input type="hidden" name="goal_id" value="';
+                echo $_POST['goal_id'];
+                echo '">';
+                ?>
+                <input type="submit" value="Delete Goal">
+            </form> 
+       
         </div>
 
         <?php require 'include/footer.php'; ?>
