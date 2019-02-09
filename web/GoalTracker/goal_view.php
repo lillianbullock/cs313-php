@@ -21,7 +21,8 @@
 
         <div class='centre purple'>
         <?php
-             $stmt = $db->prepare('SELECT ge.input, ge.timestamp
+            echo "helller";
+            $stmt = $db->prepare('SELECT ge.input, ge.timestamp
                                     FROM goal g JOIN goal_entry ge
                                     WHERE g.goal_id = :goal_id;');
             $stmt->execute(array(':goal_id' => $_POST['goal_id']));
@@ -29,6 +30,7 @@
 
             var_dump($rows);
 
+            echo "hweeeee";
         ?>
         </div>
 
