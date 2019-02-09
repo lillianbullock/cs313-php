@@ -19,10 +19,12 @@
         require 'include/header.php'; 
         
         // TODO change the goal table to have an owner, and access to just be view access
+        
         // inserts the received goal
         $stmt = $db->prepare("INSERT INTO goal
-                            ( name, entry_type, frequency_type)
+                            ( name, owner, entry_type, frequency_type)
                             VALUES ( :name
+                            , :owner
                             , (SELECT common_lookup_id from common_lookup 
                             where column_name = 'ENTRY_TYPE'
                             AND   table_name = 'GOAL'
@@ -32,11 +34,11 @@
                             AND   table_name = 'GOAL'
                             AND  value = :frequency_type ) );");
         $stmt->execute(array('name' => $_POST['name']
-                             , 'entry_type' => $_POST['entry']
-                             , 'frequency_type' => $_POST['frequency']));
+                            , 'owner' => 1 // TODO get from session when login working
+                            , 'entry_type' => $_POST['entry']
+                            , 'frequency_type' => $_POST['frequency']));
         $user = $stmt->fetch();
         // TODO --> how to know if failed other than logs?? - some way to tell user it failed?
-        // TODO --> query to get goal_id and add access to person logged in
         ?>
 
         <div class='centre purple'>

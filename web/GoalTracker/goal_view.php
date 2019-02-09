@@ -35,7 +35,7 @@
             {
                 echo '<tr><td>';
                 // TODO entry_edit to be made later
-                echo '<form action="/GoalTracker/entry_edit.php" method="POST">';
+                echo '<form action="/GoalTracker/edit_entry.php" method="POST">';
                 echo '<input type="hidden" name="goal_id" value="';
                 echo $_POST['goal_id'];
                 echo '"><input type="hidden" name="entry_id" value="';
@@ -60,8 +60,8 @@
                 <input type="submit" value="Add a New Entry">
             </form> 
 
-            <!-- TODO create a give_access & insert_access -->
-            <form action="/GoalTracker/give_access.php" method="POST">
+            <!-- TODO create a create_access & insert_access -->
+            <form action="/GoalTracker/create_access.php" method="POST">
                 <?php
                 echo '<input type="hidden" name="goal_id" value="';
                 echo $_POST['goal_id'];
