@@ -22,7 +22,7 @@
         <div class='centre purple'>
             <?php
 
-            $stmt = $db->query("SELECT name
+            $stmt = $db->prepare("SELECT name
                                     FROM goal
                                     WHERE goal_id = :goal_id;");
             $stmt->execute(array('goal_id' => $_POST['goal_id']));
@@ -34,11 +34,11 @@
             echo $goal_name['name'];
             echo '</h1>';
 
-            $stmt = $db->prepare('SELECT g_entry_id, input, timestamp
+            $stmt2 = $db->prepare('SELECT g_entry_id, input, timestamp
                                     FROM goal_entry ge
                                     WHERE goal_id = :goal_id;');
-            $stmt->execute(array('goal_id' => $_POST['goal_id']));
-            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $stmt2->execute(array('goal_id' => $_POST['goal_id']));
+            $rows = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
             echo "<table class='centre'>";
             echo "<tr><th>Entry</th><th>Date/Time</th></tr>";
