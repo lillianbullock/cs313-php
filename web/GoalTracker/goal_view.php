@@ -22,10 +22,12 @@
         <div class='centre purple'>
         <?php
             echo "helller";
-            $stmt = $db->prepare('SELECT ge.input, ge.timestamp
-                                    FROM goal g JOIN goal_entry ge
-                                    WHERE g.goal_id = :goal_id;');
-            $stmt->execute(array(':goal_id' => $_POST['goal_id']));
+
+            var_dump($_POST);
+            $stmt = $db->prepare('SELECT input, timestamp
+                                    FROM goal_entry ge
+                                    WHERE goal_id = :goal_id;');
+            $stmt->execute(array('goal_id' => $_POST['goal_id']));
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             var_dump($rows);
