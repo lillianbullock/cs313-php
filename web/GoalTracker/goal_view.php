@@ -28,8 +28,6 @@
             $stmt->execute(array('goal_id' => $_POST['goal_id']));
             $goal_name  = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            var_dump($goal_name);
-
             echo '<h1>';
             echo $goal_name[0]['name'];
             echo '</h1>';
