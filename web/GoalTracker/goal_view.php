@@ -22,11 +22,15 @@
         <div class='centre purple'>
             <?php
                 
-            $stmt = $db->prepare('SELECT g_entry_id, input, timestamp
+            $stmt = $db->prepare('SELECT g_entry_id, name, input, timestamp
                                     FROM goal_entry ge
                                     WHERE goal_id = :goal_id;');
             $stmt->execute(array('goal_id' => $_POST['goal_id']));
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            echo '<h1>';
+            echo $row['name'];
+            echo '</h1>';
 
             echo "<table class='centre'>";
             echo "<tr><th>Entry</th><th>Date/Time</th></tr>";

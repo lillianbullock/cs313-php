@@ -36,11 +36,9 @@
             $stmt->execute(array(':person_id' => 1));
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
-            //var_dump($rows);
             
-        // Goal table
+            // Goal table
 
-        // TODO add frequency and type to this table
             echo "<table class='centre'>";
             echo "<tr><th>Goal Name</th><th>Type</th><th>Frequency</th></tr>";
 
@@ -63,6 +61,9 @@
             }
             
             echo "</table>";
+
+            // TODO add list of accessible goals along with your goals
+
 
             ?>  
 
