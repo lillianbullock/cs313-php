@@ -21,16 +21,22 @@
 
         <div class='centre purple'>
             <?php
-                
-            $stmt = $db->prepare('SELECT g_entry_id, name, input, timestamp
+
+            $stmt = $db->query("SELECT name
+                                    FROM goal
+                                    WHERE goal_id = :goal_id;");
+            $stmt->execute(array('goal_id' => $_POST['goal_id']));
+            $goal_name  = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            echo '<h1>';
+            echo $goal_name;
+            echo '</h1>';
+
+            $stmt = $db->prepare('SELECT g_entry_id, input, timestamp
                                     FROM goal_entry ge
                                     WHERE goal_id = :goal_id;');
             $stmt->execute(array('goal_id' => $_POST['goal_id']));
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-            echo '<h1>';
-            echo $row['name'];
-            echo '</h1>';
 
             echo "<table class='centre'>";
             echo "<tr><th>Entry</th><th>Date/Time</th></tr>";
@@ -40,9 +46,7 @@
                 echo '<tr><td>';
                 // TODO entry_edit to be made later
                 echo '<form action="/GoalTracker/edit_entry.php" method="POST">';
-                echo '<input type="hidden" name="goal_id" value="';
-                echo $_POST['goal_id'];
-                echo '"><input type="hidden" name="entry_id" value="';
+                echo '<input type="hidden" name="g_entry_id" value="';
                 echo $row['g_entry_id'];
                 echo '"><input class="purplebutton" type="submit" value="';
                 echo $row['input'];
