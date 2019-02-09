@@ -31,7 +31,7 @@
                                 FROM goal g JOIN common_lookup cl1
                                 ON entry_type = cl1.common_lookup_id
                                 JOIN common_lookup cl2 
-                                ON frequency_type = cl2.common_lookup_type
+                                ON frequency_type = cl2.common_lookup_id
                                 WHERE owner = :person_id;');
             $stmt->execute(array(':person_id' => 1));
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
