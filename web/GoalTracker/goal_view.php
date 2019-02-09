@@ -21,21 +21,15 @@
 
         <div class='centre purple'>
         <?php
-            echo "helller";
-
+            
             $stmt = $db->prepare('SELECT g_entry_id, input, timestamp
                                     FROM goal_entry ge
                                     WHERE goal_id = :goal_id;');
             $stmt->execute(array('goal_id' => $_POST['goal_id']));
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            var_dump($rows);
-
-            echo "hweeeee";
-
-
             echo "<table class='centre'>";
-            echo "<tr><th>Goal Name</th><th>Permissions</th></tr>";
+            echo "<tr><th>Entry</th><th>Date/Time</th></tr>";
 
             foreach ($rows as $row)
             {
@@ -54,6 +48,8 @@
             }
 
             echo "</table>";
+
+            // TODO add 'delete goal' button - have confirmation 
 
         ?>
         </div>
