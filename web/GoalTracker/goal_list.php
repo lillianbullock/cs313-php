@@ -24,12 +24,15 @@
         
             <?php
             // TODO when login is working, add that to the query        
-            $stmt = $db->prepare('Select g.goal_id, g.name, cl.label
-                                FROM goal g JOIN access a
-                                USING(goal_id)
-                                JOIN common_lookup cl
-                                ON a.level_type = cl.common_lookup_id
-                                WHERE a.person_id = :person_id;');
+            $stmt = $db->prepare('Select g.goal_id
+                                , g.name
+                                , cl1.label as entry_type
+                                , cl2.label as frequency
+                                FROM goal g JOIN common_lookup cl1
+                                ON entry_type = cl1.common_lookup_id
+                                JOIN common_lookup cl2 
+                                ON frequency_type = cl2.common_lookup_type
+                                WHERE owner = :person_id;');
             $stmt->execute(array(':person_id' => 1));
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
@@ -39,7 +42,7 @@
 
         // TODO add frequency and type to this table
             echo "<table class='centre'>";
-            echo "<tr><th>Goal Name</th><th>Permissions</th></tr>";
+            echo "<tr><th>Goal Name</th><th>Type</th><th>Frequency</th></tr>";
 
             foreach ($rows as $row)
             {
@@ -53,7 +56,9 @@
                 echo '"></form>';
                 
                 echo '</td><td>';
-                echo $row['label'];
+                echo $row['entry_type'];
+                echo '</td><td>';
+                echo $row['frequency'];
                 echo "</td></tr>\n";
             }
             
