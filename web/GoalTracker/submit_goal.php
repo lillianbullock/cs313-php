@@ -32,9 +32,9 @@
                             where column_name = 'FREQUENCY_TYPE'
                             AND   table_name = 'GOAL'
                             AND  value = :frequency_type ) );");
-        $stmt->execute(array('name' => $_GET['name']
-                             , 'entry_type' => $_GET['entry']
-                             , 'frequency_type' => $_GET['frequency']));
+        $stmt->execute(array('name' => $_POST['name']
+                             , 'entry_type' => $_POST['entry']
+                             , 'frequency_type' => $_POST['frequency']));
         $user = $stmt->fetch();
         // TODO --> how to know if failed other than logs?? - some way to tell user it failed?
         // TODO --> query to get goal_id and add access to person logged in
