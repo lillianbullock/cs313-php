@@ -23,8 +23,7 @@
         <?php
             echo "helller";
 
-            var_dump($_POST);
-            $stmt = $db->prepare('SELECT input, timestamp
+            $stmt = $db->prepare('SELECT g_entry_id, input, timestamp
                                     FROM goal_entry ge
                                     WHERE goal_id = :goal_id;');
             $stmt->execute(array('goal_id' => $_POST['goal_id']));
@@ -33,6 +32,29 @@
             var_dump($rows);
 
             echo "hweeeee";
+
+
+            echo "<table class='centre'>";
+            echo "<tr><th>Goal Name</th><th>Permissions</th></tr>";
+
+            foreach ($rows as $row)
+            {
+                echo '<tr><td>';
+                // TODO entry_edit to be made later
+                echo '<form action="/GoalTracker/entry_edit.php" method="POST">';
+                echo '<input type="hidden" id="goal_id" name="goal_id" value="';
+                echo $_POST['goal_id'];
+                echo '"><input type="hidden" id="entry_id" name="entry_id" value="';
+                echo $row['g_entry_id'];
+                echo '"><input class="purplebutton" type="submit" value="';
+                echo $row['input'];
+                echo '"></form></td><td>';
+                echo $row['timestamp'];
+                echo "</td></tr>\n";
+            }
+
+            echo "</table>";
+
         ?>
         </div>
 
