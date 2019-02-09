@@ -31,7 +31,7 @@
             var_dump($goal_name);
 
             echo '<h1>';
-            echo $goal_name['name'];
+            echo $goal_name[0]['name'];
             echo '</h1>';
 
             $stmt2 = $db->prepare('SELECT g_entry_id, input, timestamp
