@@ -16,7 +16,6 @@
     <body>
         <?php         
         require 'include/getDB.php';
-
         require 'include/header.php'; 
         
         //var_dump($_GET);
@@ -38,6 +37,7 @@
                              , 'frequency_type' => $_GET['frequency']));
         $user = $stmt->fetch();
         // TODO --> how to know if failed other than logs?? - some way to tell user it failed?
+        // TODO --> query to get goal_id and add access to person logged in
 
         echo "<p>Row inserted</p>";
         ?>
