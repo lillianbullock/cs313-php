@@ -21,6 +21,8 @@
         // TODO change the goal table to have an owner, and access to just be view access
         
         $lastId = $pdo->lastInsertId('goal_goal_id_seq');
+        echo "lastID is ";
+        echo $lastId;
 
         // inserts the received goal
         $stmt = $db->prepare("INSERT INTO goal
@@ -40,6 +42,8 @@
                             , 'entry_type' => $_POST['entry']
                             , 'frequency_type' => $_POST['frequency']));
         $user = $stmt->fetch();
+        echo "blargh";
+
 
         $newId = $pdo->lastInsertId('goal_goal_id_seq');
 
