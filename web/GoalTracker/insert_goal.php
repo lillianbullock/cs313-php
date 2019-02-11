@@ -15,9 +15,11 @@
     
     <body>
         <?php         
-        require 'include/getDB.php';
         require 'include/header.php'; 
+        echo "heeeeeeeeey";
+        require 'include/getDB.php';
         
+
         // TODO change the goal table to have an owner, and access to just be view access
         
         echo "heeeey";
