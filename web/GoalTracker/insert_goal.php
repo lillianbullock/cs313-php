@@ -36,7 +36,8 @@
                             , 'entry_type' => $_POST['entry']
                             , 'frequency_type' => $_POST['frequency']));
 
-        //$user = $stmt->fetch();
+        $user = $stmt->fetch(); // not needed for insert stmt
+        var_dump($user);
 
         $newId = $db->lastInsertId('goal_goal_id_seq');
 
