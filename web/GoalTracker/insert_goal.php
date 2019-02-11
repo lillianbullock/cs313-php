@@ -31,14 +31,12 @@
                             where column_name = 'FREQUENCY_TYPE'
                             AND   table_name = 'GOAL'
                             AND  value = :frequency_type ) );");
-        echo "ONE";
-
         $stmt->execute(array('name' => $_POST['name']
                             , 'owner' => '1' // TODO get from session when login working
                             , 'entry_type' => $_POST['entry']
                             , 'frequency_type' => $_POST['frequency']));
 
-        $user = $stmt->fetch();
+        //$user = $stmt->fetch();
 
         $newId = $db->lastInsertId('goal_goal_id_seq');
 
