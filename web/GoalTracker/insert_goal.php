@@ -16,18 +16,8 @@
     <body>
         <?php         
         require 'include/header.php'; 
-        echo "heeeeeeeeey";
         require 'include/getDB.php';
-        
-
-        // TODO change the goal table to have an owner, and access to just be view access
-        
-        echo "heeeey";
-
-        $lastId = $db->lastInsertId('goal_goal_id_seq');
-        echo "lastID is ";
-        echo $lastId;
-
+    
         // inserts the received goal
         $stmt = $db->prepare("INSERT INTO goal
                             ( name, owner, entry_type, frequency_type)
@@ -52,7 +42,7 @@
 
         $newId = $db->lastInsertId('goal_goal_id_seq');
 
-        echo $lastId , " ", $newId;
+        echo "New Id is  ", $newId;
 
         // TODO --> how to know if failed other than logs?? - some way to tell user it failed?
         ?>
