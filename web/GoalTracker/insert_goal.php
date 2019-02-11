@@ -24,9 +24,9 @@
         
         echo "heeeey";
 
-        $lastId = $db->lastInsertId('goal_goal_id_seq');
-        echo "lastID is ";
-        echo $lastId;
+        //$lastId = $db->lastInsertId('goal_goal_id_seq');
+        //echo "lastID is ";
+        //echo $lastId;
 
         // inserts the received goal
         $stmt = $db->prepare("INSERT INTO goal
