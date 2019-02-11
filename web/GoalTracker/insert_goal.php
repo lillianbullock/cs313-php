@@ -38,7 +38,7 @@
                             AND   table_name = 'GOAL'
                             AND  value = :frequency_type ) );");
         $stmt->execute(array('name' => $_POST['name']
-                            , 'owner' => 1 // TODO get from session when login working
+                            , 'owner' => '1' // TODO get from session when login working
                             , 'entry_type' => $_POST['entry']
                             , 'frequency_type' => $_POST['frequency']));
         $user = $stmt->fetch();
