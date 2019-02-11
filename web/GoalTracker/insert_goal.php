@@ -18,6 +18,7 @@
         require 'include/header.php'; 
         require 'include/getDB.php';
     
+        try {
         // inserts the received goal
         $stmt = $db->prepare("INSERT INTO goal
                             ( name, owner, entry_type, frequency_type)
@@ -35,8 +36,12 @@
                             , 'owner' => '1' // TODO get from session when login working
                             , 'entry_type' => $_POST['entry']
                             , 'frequency_type' => $_POST['frequency']));
+        } catch (exception $e)
+        {
+            echo "The insert failed";
+        }
 
-        $user = $stmt->fetch(); // not needed for insert stmt
+        //$user = $stmt->fetch(); // not needed for insert stmt
         var_dump($user);
 
         $newId = $db->lastInsertId('goal_goal_id_seq');
