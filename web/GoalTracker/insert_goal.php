@@ -20,7 +20,9 @@
         
         // TODO change the goal table to have an owner, and access to just be view access
         
-        $lastId = $pdo->lastInsertId('goal_goal_id_seq');
+        echo "heeeey";
+
+        $lastId = $db->lastInsertId('goal_goal_id_seq');
         echo "lastID is ";
         echo $lastId;
 
@@ -45,7 +47,7 @@
         echo "blargh";
 
 
-        $newId = $pdo->lastInsertId('goal_goal_id_seq');
+        $newId = $db->lastInsertId('goal_goal_id_seq');
 
         echo $lastId , " ", $newId;
 
