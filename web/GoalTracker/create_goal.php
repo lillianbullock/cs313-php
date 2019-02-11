@@ -22,7 +22,8 @@
         <div class='centre purple'>
             <form action="insert_goal.php" method="POST" class="centre">
                 Goal name:<br>
-                <input type="text" name="name"><br>
+                <!-- TODO remove default value for production-->
+                <input type="text" name="name" value="Test"><br>
             
                 <br>Frequency:<br>
                 <?php
