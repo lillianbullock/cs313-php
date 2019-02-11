@@ -20,6 +20,8 @@
         
         // TODO change the goal table to have an owner, and access to just be view access
         
+        $lastId = $pdo->lastInsertId('goal_goal_id_seq');
+
         // inserts the received goal
         $stmt = $db->prepare("INSERT INTO goal
                             ( name, owner, entry_type, frequency_type)
@@ -38,6 +40,11 @@
                             , 'entry_type' => $_POST['entry']
                             , 'frequency_type' => $_POST['frequency']));
         $user = $stmt->fetch();
+
+        $newId = $pdo->lastInsertId('goal_goal_id_seq');
+
+        echo $lastId , " ", $newId;
+
         // TODO --> how to know if failed other than logs?? - some way to tell user it failed?
         ?>
 
