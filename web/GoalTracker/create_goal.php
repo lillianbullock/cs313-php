@@ -15,8 +15,8 @@
     
     <body>
         <?php    
-        require 'include/header.php';
-        require 'include/getDB.php';
+            require 'include/header.php';
+            require 'include/getDB.php';
         ?>
 
         <!-- TODO add javascript validation -->
@@ -28,39 +28,38 @@
                 <input type="text" id="name" name="name" value="Test"
                 onchange="validateText('name', 'nameError')"><br>
             
-                <br>Frequency:<br>
+                <br>Frequency:
                 <span id="frequencyError" class="error">Empty Field</span><br/>
-                <?php
-                // gets all the possible frequencies
-                foreach ($db->query("SELECT common_lookup_id, label 
-                                    FROM common_lookup 
-                                    WHERE column_name = 'FREQUENCY_TYPE'
-                                    AND table_name = 'GOAL';") as $row)
-                {
-                    echo '<input type="radio" id="frequency" name="frequency" value="';
-                    echo $row['id'];
-                    echo '">';
-                    //makes string lowercase, and then upercases first letter of each word
-                    echo ucwords(strtolower($row['label'])); 
-                    echo "<br>\n";
-                }
                 
-                // gets all the possible input types
-                echo '<br>Input Type:<br>';
-                echo '<span id="inputError" class="error">Empty Field</span><br/>';
+                <?php
+                    // gets all the possible frequencies
+                    foreach ($db->query("SELECT common_lookup_id, label 
+                                        FROM common_lookup 
+                                        WHERE column_name = 'FREQUENCY_TYPE'
+                                        AND table_name = 'GOAL';") as $row) {
+                        echo '<input type="radio" id="frequency" name="frequency" value="';
+                        echo $row['id'];
+                        echo '">';
+                        echo $row['label']; 
+                        echo "<br>\n";
+                    }
+                ?>
+                
+                <br>Input Type:
+                <span id="inputError" class="error">Empty Field</span><br/>
 
-                foreach ($db->query("SELECT common_lookup_id, label 
-                                    FROM common_lookup 
-                                    WHERE column_name = 'ENTRY_TYPE' 
-                                    AND table_name = 'GOAL';") as $row)
-                {
-                    echo '<input type="radio" id="entry" name="entry" value="';
-                    echo $row['id'];
-                    echo '">';
-                    //makes string lowercase, and then upercases first letter of each word
-                    echo ucwords(strtolower($row['label'])); 
-                    echo "<br>\n";
-                }
+                <?php
+                    // gets all the possible input types
+                    foreach ($db->query("SELECT common_lookup_id, label 
+                                        FROM common_lookup 
+                                        WHERE column_name = 'ENTRY_TYPE' 
+                                        AND table_name = 'GOAL';") as $row) {
+                        echo '<input type="radio" id="entry" name="entry" value="';
+                        echo $row['id'];
+                        echo '">';
+                        echo $row['label']; 
+                        echo "<br>\n";
+                    }
                 ?>
 
                 <br/><input type="submit" value="Submit">

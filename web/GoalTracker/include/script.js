@@ -80,7 +80,7 @@ validation for each form
 ************************************************/
 function validateCreateGoal() {
     var name = document.getElementById("name").value;
-    var 
+    var freq = document.getElementById("");
     
     if (name.length == 0) {
         setVisible("nameError");
@@ -88,44 +88,21 @@ function validateCreateGoal() {
         return false;
     }
 
-
-    for (i = 0; i < radios.length; ++ i) {
-        if (radios [i].checked) {
+    for (i = 0; i < freq.length; ++ i) {
+        if (freq[i].checked) {
             setVisible("")
+            return false;
         }
-        }
-        return false;
     }
     
-    function validateForm()
-    {
-        if(validateRadio (document.forms["survey1"]["q1"]))
-        {
-            return true;
-        }
-        else
-        {
-            alert('Please answer all questions');
+    for (i = 0; i < freq.length; ++ i) {
+        if (freq[i].checked) {
+            setVisible("")
             return false;
         }
     }
 
-
-
-
-    else if (!validatePhone()) {
-        setFocus('phone');
-        return false;
-    }
-    else if (!validateCCNum()) {
-        setFocus('ccnum');
-        return false;
-    }
-    else if (!validateExpiry()) {
-        //no field to set focus to 
-        return false;
-    }
-        return true;
+    return true;
 }
 
 
