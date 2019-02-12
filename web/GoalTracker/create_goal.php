@@ -38,7 +38,7 @@
                                         WHERE column_name = 'FREQUENCY_TYPE'
                                         AND table_name = 'GOAL';") as $row) {
                         echo '<input type="radio" id="frequency" name="frequency" value="';
-                        echo $row['id'];
+                        echo $row['common_lookup_id'];
                         echo '">';
                         echo $row['label']; 
                         echo "<br>\n";
@@ -55,7 +55,7 @@
                                         WHERE column_name = 'ENTRY_TYPE' 
                                         AND table_name = 'GOAL';") as $row) {
                         echo '<input type="radio" id="entry" name="entry" value="';
-                        echo $row['id'];
+                        echo $row['common_lookup_id'];
                         echo '">';
                         echo $row['label']; 
                         echo "<br>\n";
