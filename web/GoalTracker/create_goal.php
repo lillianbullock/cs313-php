@@ -32,14 +32,14 @@
                 <span id="frequencyError" class="error">Empty Field</span><br/>
                 <?php
                 // gets all the possible frequencies
-                foreach ($db->query("SELECT value, label 
+                foreach ($db->query("SELECT common_lookup_id, label 
                                     FROM common_lookup 
                                     WHERE column_name = 'FREQUENCY_TYPE'
                                     AND table_name = 'GOAL';") as $row)
                 {
                     echo '<input type="radio" id="frequency" name="frequency" value="';
-                    echo $row['value'];
-                    echo '" onchange="validateRadio("frequency", "frequencyError")">';
+                    echo $row['id'];
+                    echo '">';
                     //makes string lowercase, and then upercases first letter of each word
                     echo ucwords(strtolower($row['label'])); 
                     echo "<br>\n";
@@ -47,13 +47,15 @@
                 
                 // gets all the possible input types
                 echo '<br>Input Type:<br>';
-                foreach ($db->query("SELECT value, label 
+                echo '<span id="inputError" class="error">Empty Field</span><br/>';
+
+                foreach ($db->query("SELECT common_lookup_id, label 
                                     FROM common_lookup 
                                     WHERE column_name = 'ENTRY_TYPE' 
                                     AND table_name = 'GOAL';") as $row)
                 {
                     echo '<input type="radio" id="entry" name="entry" value="';
-                    echo $row['value'];
+                    echo $row['id'];
                     echo '">';
                     //makes string lowercase, and then upercases first letter of each word
                     echo ucwords(strtolower($row['label'])); 

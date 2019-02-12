@@ -1,5 +1,7 @@
 
-/*Basics*/
+/************************************************
+Basics
+************************************************/
 function setFocus(theID) {
     document.getElementById(theID).focus();
 }
@@ -22,18 +24,19 @@ function reseterrors() {
     }
 }
 
-/*Specific types of fields*/
+/************************************************
+Specific types of fields
+************************************************/
 function validateText(text, texterror) {
     var data = document.getElementById(text).value;
      
     if (data.length == 0) {
         setVisible(texterror);
-        return false;
     }
     else setHidden(texterror);
-    return true;
 }
 
+/*
 function validateRadio (radio, radioError) {
     var data = document.getElementById(radio).value;
 
@@ -46,7 +49,9 @@ function validateRadio (radio, radioError) {
     setHidden(radioError);
     return true;
 }
+*/
 
+/*
 function validateDropDown(field, fieldError) {
     // for this function to work, value of the default must be none
     if (document.getElementById(field).value == "none") {
@@ -56,7 +61,9 @@ function validateDropDown(field, fieldError) {
     setHidden(fieldError);
     return true;
 }
+*/
 
+/*
 function validateNumber(text, texterror) {
     var data = document.getElementById(text).value;
      
@@ -65,17 +72,47 @@ function validateNumber(text, texterror) {
     }
     else setHidden(texterror);
 }
+*/
 
 
-/*validation for each form*/
+/************************************************
+validation for each form
+************************************************/
 function validateCreateGoal() {
     var name = document.getElementById("name").value;
-     
+    var 
+    
     if (name.length == 0) {
         setVisible("nameError");
         setFocus("name");
         return false;
     }
+
+
+    for (i = 0; i < radios.length; ++ i) {
+        if (radios [i].checked) {
+            setVisible("")
+        }
+        }
+        return false;
+    }
+    
+    function validateForm()
+    {
+        if(validateRadio (document.forms["survey1"]["q1"]))
+        {
+            return true;
+        }
+        else
+        {
+            alert('Please answer all questions');
+            return false;
+        }
+    }
+
+
+
+
     else if (!validatePhone()) {
         setFocus('phone');
         return false;
