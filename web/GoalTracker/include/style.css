@@ -21,6 +21,11 @@ span.title {
     font-size:24px;
 }
 
+span.error {
+    color: red;
+    visibility: hidden;
+}
+
 .l-blue {
     background-color: #88BBFF;
 }

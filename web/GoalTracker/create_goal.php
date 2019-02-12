@@ -9,7 +9,7 @@
         <!--internal style sheets-->
         <style> </style>
 
-        <!-- <script src=prove01.js> </script> -->
+        <script src=include/script.js> </script>
                   
     </head>
     
@@ -22,11 +22,14 @@
         <!-- TODO add javascript validation -->
         <div class='centre purple'>
             <form action="insert_goal.php" method="POST" class="centre">
-                Goal name:<br>
+                Goal name:
+                <span id="nameError" class="error">Empty Field</span><br/>
                 <!-- TODO remove default value for production-->
-                <input type="text" name="name" value="Test"><br>
+                <input type="text" id="name" name="name" value="Test"
+                onchange="validateText('name', 'nameError')"><br>
             
                 <br>Frequency:<br>
+                <span id="frequencyError" class="error">Empty Field</span><br/>
                 <?php
                 // gets all the possible frequencies
                 foreach ($db->query("SELECT value, label 
@@ -34,9 +37,9 @@
                                     WHERE column_name = 'FREQUENCY_TYPE'
                                     AND table_name = 'GOAL';") as $row)
                 {
-                    echo '<input type="radio" name="frequency" value="';
+                    echo '<input type="radio" id="frequency" name="frequency" value="';
                     echo $row['value'];
-                    echo '">';
+                    echo '" onchange="validateRadio("frequency", "frequencyError")">';
                     //makes string lowercase, and then upercases first letter of each word
                     echo ucwords(strtolower($row['label'])); 
                     echo "<br>\n";
@@ -49,7 +52,7 @@
                                     WHERE column_name = 'ENTRY_TYPE' 
                                     AND table_name = 'GOAL';") as $row)
                 {
-                    echo '<input type="radio" name="entry" value="';
+                    echo '<input type="radio" id="entry" name="entry" value="';
                     echo $row['value'];
                     echo '">';
                     //makes string lowercase, and then upercases first letter of each word

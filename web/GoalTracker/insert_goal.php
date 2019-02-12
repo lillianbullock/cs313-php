@@ -44,8 +44,8 @@
            
             echo "Row inserted";
 
-            $newId = $db->lastInsertId('goal_goal_id_seq');
-            echo "New Id is  ", $newId;
+            //$newId = $db->lastInsertId('goal_goal_id_seq');
+            //echo "New Id is  ", $newId;
 
         } catch (exception $e)
         {
