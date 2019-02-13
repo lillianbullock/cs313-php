@@ -32,8 +32,9 @@
             
                 <br>Frequency:
                 <span id="frequencyError" class="error">Empty Field</span><br/>
-                
-                <select id="frequency" name="frequency">
+
+                <select id="frequency" name="frequency"
+                onchange="validateDropDown('frequency', 'frequencyError')">
                     <option value="none">Choose One</option>
                     <?php
                     // gets all the possible frequencies
@@ -51,9 +52,10 @@
                 </select><br/>
                 
                 <br>Input Type:
-                <span id="inputError" class="error">Empty Field</span><br/>
+                <span id="entryError" class="error">Empty Field</span><br/>
 
-                <select id="entry" name="entry">
+                <select id="entry" name="entry"
+                onchange="validateDropDown('entry', 'entryError')">
                     <option value="none">Choose One</option>
                     <?php
                     // gets all the possible frequencies

@@ -51,7 +51,7 @@ function validateRadio (radio, radioError) {
 }
 */
 
-/*
+
 function validateDropDown(field, fieldError) {
     // for this function to work, value of the default must be none
     if (document.getElementById(field).value == "none") {
@@ -61,7 +61,7 @@ function validateDropDown(field, fieldError) {
     setHidden(fieldError);
     return true;
 }
-*/
+
 
 /*
 function validateNumber(text, texterror) {
@@ -88,8 +88,6 @@ function validateCreateGoal() {
         setFocus("name");
         return false;
     }
-
-    alert(freq);
 
     for (i = 0; i < freq.length; ++ i) {
         if (freq[i].checked) {
