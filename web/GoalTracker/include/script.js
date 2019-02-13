@@ -89,6 +89,8 @@ function validateCreateGoal() {
         return false;
     }
 
+    alert(freq);
+
     for (i = 0; i < freq.length; ++ i) {
         if (freq[i].checked) {
             setVisible("frequencyError");
@@ -96,7 +98,7 @@ function validateCreateGoal() {
         }
     }
     
-    for (i = 0; i < freq.length; ++ i) {
+    for (i = 0; i < entry.length; ++ i) {
         if (entry[i].checked) {
             setVisible("input");
             return false;
