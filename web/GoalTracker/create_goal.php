@@ -32,9 +32,9 @@
             
                 <br>Frequency:
                 <span id="frequencyError" class="error">Empty Field</span><br/>
+                
                 <select id="frequency" name="frequency">
                     <option value="none">Choose One</option>
-                    
                     <?php
                     // gets all the possible frequencies
                     foreach ($db->query("SELECT common_lookup_id, label 
@@ -48,39 +48,27 @@
                         echo "</option>\n";
                     }
                     ?>
-                </select>
-
-
-                <?php /*
-                    // gets all the possible frequencies
-                    foreach ($db->query("SELECT common_lookup_id, label 
-                                        FROM common_lookup 
-                                        WHERE column_name = 'FREQUENCY_TYPE'
-                                        AND table_name = 'GOAL';") as $row) {
-                        echo '<input type="radio" id="frequency" name="frequency" value="';
-                        echo $row['common_lookup_id'];
-                        echo '">';
-                        echo $row['label']; 
-                        echo "<br>\n";
-                    }*/
-                ?>
+                </select><br/>
                 
                 <br>Input Type:
                 <span id="inputError" class="error">Empty Field</span><br/>
 
-                <?php
-                    // gets all the possible input types
+                <select id="entry" name="entry">
+                    <option value="none">Choose One</option>
+                    <?php
+                    // gets all the possible frequencies
                     foreach ($db->query("SELECT common_lookup_id, label 
                                         FROM common_lookup 
                                         WHERE column_name = 'ENTRY_TYPE' 
                                         AND table_name = 'GOAL';") as $row) {
-                        echo '<input type="radio" id="entry" name="entry" value="';
+                        echo '<option value="';
                         echo $row['common_lookup_id'];
                         echo '">';
                         echo $row['label']; 
-                        echo "<br>\n";
+                        echo "</option>\n";
                     }
-                ?>
+                    ?>
+                </select><br/>
 
                 <br/><input type="submit" value="Submit">
                 <input type="reset" value="Reset"/>
