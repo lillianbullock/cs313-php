@@ -32,7 +32,27 @@
             
                 <br>Frequency:
                 <span id="frequencyError" class="error">Empty Field</span><br/>
-                
+                <select id="frequency[]">
+                    <option value="none">Choose One</option>
+                    
+                    <?php
+                    // gets all the possible frequencies
+                    foreach ($db->query("SELECT common_lookup_id, label 
+                                        FROM common_lookup 
+                                        WHERE column_name = 'FREQUENCY_TYPE'
+                                        AND table_name = 'GOAL';") as $row) {
+                        echo '<option value="';
+                        echo $row['common_lookup_id'];
+                        echo '">';
+                        echo $row['label']; 
+                        echo "</option>\n";
+                    }
+                    ?>
+
+
+                </select>
+
+
                 <?php
                     // gets all the possible frequencies
                     foreach ($db->query("SELECT common_lookup_id, label 
