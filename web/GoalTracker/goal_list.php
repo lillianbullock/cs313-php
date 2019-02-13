@@ -37,7 +37,6 @@
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             ?>
 
-            // Goal table
             <span>My Goals</span>
             <table class='centre'>
                 <tr>
