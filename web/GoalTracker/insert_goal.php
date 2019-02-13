@@ -23,7 +23,7 @@
         
         <?php
 
-        var_dump("$_POST");
+        var_dump($_POST);
 
         try {
         // inserts the received goal, and if it fails deals with the
