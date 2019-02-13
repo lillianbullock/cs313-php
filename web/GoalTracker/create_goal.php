@@ -32,7 +32,7 @@
             
                 <br>Frequency:
                 <span id="frequencyError" class="error">Empty Field</span><br/>
-                <select id="frequency">
+                <select id="frequency" name="frequency">
                     <option value="none">Choose One</option>
                     
                     <?php
