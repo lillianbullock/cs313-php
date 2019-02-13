@@ -51,7 +51,6 @@ function validateRadio (radio, radioError) {
 }
 */
 
-
 function validateDropDown(field, fieldError) {
     // for this function to work, value of the default must be none
     if (document.getElementById(field).value == "none") {
@@ -61,7 +60,6 @@ function validateDropDown(field, fieldError) {
     setHidden(fieldError);
     return true;
 }
-
 
 /*
 function validateNumber(text, texterror) {
@@ -74,33 +72,30 @@ function validateNumber(text, texterror) {
 }
 */
 
-
 /************************************************
 validation for each form
 ************************************************/
 function validateCreateGoal() {
     var name = document.getElementById("name").value;
-    var freq = document.getElementById("frequency");    
-    var entry = document.getElementById("entry");
+    var freq = document.getElementById("frequency").value;    
+    var entry = document.getElementById("entry").value;
+
+    if (entry == "none") {
+        setVisible("entryError");
+        setFocus("entry");
+        return false;
+    }
+
+    if (freq == "none") {
+        setVisible("frequencyError");
+        setFocus("frequency");
+        return false;
+    }
 
     if (name.length == 0) {
         setVisible("nameError");
         setFocus("name");
         return false;
-    }
-
-    for (i = 0; i < freq.length; ++ i) {
-        if (freq[i].checked) {
-            setVisible("frequencyError");
-            return false;
-        }
-    }
-    
-    for (i = 0; i < entry.length; ++ i) {
-        if (entry[i].checked) {
-            setVisible("input");
-            return false;
-        }
     }
 
     return true;
