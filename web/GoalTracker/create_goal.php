@@ -21,7 +21,9 @@
 
         <!-- TODO add javascript validation -->
         <div class='centre purple'>
-            <form action="insert_goal.php" method="POST" class="centre">
+            <form action="insert_goal.php" method="POST" class="centre"
+            onsubmit="return validateCreateGoal()" onreset="reseterrors()"
+            >
                 Goal name:
                 <span id="nameError" class="error">Empty Field</span><br/>
                 <!-- TODO remove default value for production-->
@@ -63,6 +65,7 @@
                 ?>
 
                 <br/><input type="submit" value="Submit">
+                <input type="reset" value="Reset"/>
             </form>
         </div>
 
