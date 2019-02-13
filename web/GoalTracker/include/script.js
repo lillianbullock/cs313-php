@@ -80,8 +80,9 @@ validation for each form
 ************************************************/
 function validateCreateGoal() {
     var name = document.getElementById("name").value;
-    var freq = document.getElementById("");
-    
+    var freq = document.getElementById("frequency");    
+    var entry = document.getElementById("entry");
+
     if (name.length == 0) {
         setVisible("nameError");
         setFocus("name");
@@ -90,14 +91,14 @@ function validateCreateGoal() {
 
     for (i = 0; i < freq.length; ++ i) {
         if (freq[i].checked) {
-            setVisible("")
+            setVisible("frequencyError");
             return false;
         }
     }
     
     for (i = 0; i < freq.length; ++ i) {
-        if (freq[i].checked) {
-            setVisible("")
+        if (entry[i].checked) {
+            setVisible("input");
             return false;
         }
     }
