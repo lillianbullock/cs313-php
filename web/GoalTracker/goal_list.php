@@ -88,9 +88,8 @@
             ?>
 
             <span>Shared with Me</span>
-            // Goal table
-            echo "<table class='centre'>";
-            echo "<tr><th>Goal Name</th><th>Type</th><th>Frequency</th></tr>";
+            <table class='centre'>
+            <tr><th>Goal Name</th><th>Type</th><th>Frequency</th></tr>
 
             <?php
             foreach ($rows as $row)
