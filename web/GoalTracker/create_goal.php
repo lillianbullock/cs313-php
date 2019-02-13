@@ -48,12 +48,10 @@
                         echo "</option>\n";
                     }
                     ?>
-
-
                 </select>
 
 
-                <?php
+                <?php /*
                     // gets all the possible frequencies
                     foreach ($db->query("SELECT common_lookup_id, label 
                                         FROM common_lookup 
@@ -64,7 +62,7 @@
                         echo '">';
                         echo $row['label']; 
                         echo "<br>\n";
-                    }
+                    }*/
                 ?>
                 
                 <br>Input Type:
