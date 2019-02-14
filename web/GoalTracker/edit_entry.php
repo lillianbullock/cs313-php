@@ -46,6 +46,8 @@
             
                 TimeStamp: <span> <?php echo $entry['timestamp']; ?> </span><br/>
 
+                <input type="hidden" name="g_entry_id" value="<?php echo $entry['g_entry_id'];?> ">
+
                 <br/><input type="submit" value="Submit">
                 <input type="reset" value="Reset"/>
             </form>
