@@ -44,6 +44,7 @@
                 onchange="validateText('entry', 'entryError')">
                 <span id="entryError" class="error">Empty Field</span><br><br/>
             
+                <!-- TODO add calendar picker just in case -->
                 TimeStamp: <span> <?php echo $entry['timestamp']; ?> </span><br/>
 
                 <input type="hidden" name="g_entry_id" value="<?php echo $entry['g_entry_id'];?> ">
