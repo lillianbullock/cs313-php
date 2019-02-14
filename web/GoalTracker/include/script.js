@@ -101,13 +101,18 @@ function validateCreateGoal() {
     return true;
 }
 
+function validateEditEntry() {
+    var entry = document.getElementById("entry").value;
+    
+    if (entry.length == 0) {
+        setVisible("entryError");
+        setFocus("entry");
+        return false;
+    }
 
+}
 
-
-
-
-
-
+/*
 function validateAll() {
     var firstN = document.getElementById("firstN").value;
     var lastN = document.getElementById("lastN").value;
@@ -141,5 +146,6 @@ function validateAll() {
         //no field to set focus to 
         return false;
     }
-        return true;
+    return true;
 }
+*/

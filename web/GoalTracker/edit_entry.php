@@ -21,8 +21,8 @@
 
         <div class='centre purple'>
 
-            <form action="edit_c_enter.php" method="POST" class="centre"
-            onsubmit="return validateEditGoal()" onreset="reseterrors()">
+            <form action="update_entry.php" method="POST" class="centre"
+            onsubmit="return validateEditEntry()" onreset="reseterrors()">
 
                 <?php
 
@@ -40,9 +40,9 @@
 
                 Goal name: <span> <?php echo $entry['name']; ?> </span><br/>
 
-                <span id="entryError" class="error">Empty Field</span><br/>
                 Input: <input type="text" id="entry" name="entry" value="<?php echo $entry['input']; ?>"
-                onchange="validateText('entry', 'entryError')"><br><br/>
+                onchange="validateText('entry', 'entryError')">
+                <span id="entryError" class="error">Empty Field</span><br><br/>
             
                 TimeStamp: <span> <?php echo $entry['timestamp']; ?> </span><br/>
 
