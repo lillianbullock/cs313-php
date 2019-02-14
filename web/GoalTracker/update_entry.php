@@ -31,7 +31,8 @@
             $stmt = $db->prepare("UPDATE goal_entry 
                                 SET input = :entry 
                                 WHERE g_entry_id = :goal_entry_id;");
-            $stmt->execute(array('goal_entry_id' => $_POST['g_entry_id']));
+            $stmt->execute(array( 'entry' => $_POST['entry']
+                                , 'goal_entry_id' => $_POST['g_entry_id']));
 
             echo "Row updated";
 
