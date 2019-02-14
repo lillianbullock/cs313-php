@@ -1,4 +1,6 @@
--- all things in here done
+-- --------------------------------------------------------
+-- THIS IS THE OFFICIAL VERSION
+-- --------------------------------------------------------
 
 CREATE TABLE common_lookup
 ( common_lookup_id	  serial		PRIMARY KEY
@@ -15,28 +17,31 @@ CREATE TABLE person
 , email     varchar(20)    NOT NULL
 );
 
+ALTER TABLE person ADD CONSTRAINT unique_person_email UNIQUE (email);
+
 CREATE TABLE goal
 ( goal_id	        serial		PRIMARY KEY
 , name		        varchar(40)	NOT NULL
 , entry_type		integer		NOT NULL
 , frequency_type	integer		NOT NULL
+, owner             integer     NOT NULL 
 , CONSTRAINT fk_entry_type      FOREIGN KEY (entry_type) 
     REFERENCES common_lookup(common_lookup_id)
 , CONSTRAINT fk_frequency_type  FOREIGN KEY (frequency_type) 
     REFERENCES common_lookup(common_lookup_id)
+, CONSTRAINT fk_owner FOREIGN_KEY (owner)
+    REFERENCES person(person_id)
 );
  
 CREATE TABLE access 
 ( access_id     serial		PRIMARY KEY
 , person_id 	integer		NOT NULL
 , goal_id	    integer		NOT NULL
-, level_type	integer		NOT NULL
+, can_edit	    bool		NOT NULL
 , CONSTRAINT fk_person_id   FOREIGN KEY (person_id)
     REFERENCES person(person_id)
 , CONSTRAINT fk_goal_id     FOREIGN KEY (goal_id)
     REFERENCES goal(goal_id)
-, CONSTRAINT fk_level_type  FOREIGN KEY (level_type)
-    REFERENCES common_lookup(common_lookup_id)
 );
 
 CREATE TABLE goal_entry

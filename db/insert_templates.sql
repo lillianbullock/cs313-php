@@ -80,3 +80,23 @@ VALUES
 ( :goal_id
 , :input
 , NOW() );
+
+
+SELECT ge.input, ge.timestamp
+FROM goal g JOIN goal_entry ge
+WHERE g.goal_id = :goal_id;
+
+
+Select g.goal_id
+      , g.name
+      , cl1.label as entry_type
+      , cl2.label as frequency
+FROM goal g JOIN access a
+ON g.goal_id = a.goal_id
+AND a.person_id = :person_id
+JOIN common_lookup cl1 
+ON entry_type = cl1.common_lookup_id
+JOIN common_lookup cl2 
+ON frequency_type = cl2.common_lookup_id
+
+WHERE owner = :person_id;
