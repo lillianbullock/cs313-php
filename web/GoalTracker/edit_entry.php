@@ -25,13 +25,14 @@
             onsubmit="return validateEditGoal()" onreset="reseterrors()">
 
                 <?php
-                $entry = $db->query("select g.name
+
+                $statement = $db->query("select g.name
                             , e.g_entry_id
                             , e.input
                             , e.timestamp 
                             FROM goal g JOIN goal_entry e 
                             ON g.goal_id = e.goal_id;");
-                
+                $entry = $statement->fetchAll(PDO::FETCH_ASSOC);
                 var_dump($entry);
 
                 ?>
