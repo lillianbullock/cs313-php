@@ -38,13 +38,13 @@
 
                 ?>
 
-                Goal name: <span> <?php $entry['name']; ?> </span><br/>
+                Goal name: <span> <?php echo $entry['name']; ?> </span><br/>
 
                 <span id="nameError" class="error">Empty Field</span><br/>
                 Input: <input type="text" id="entry" name="entry" value="<?php echo $entry['input']; ?>"
                 onchange="validateText('entry', 'entryError')"><br>
             
-                TimeStamp: <span> <?php $entry['timestamp']; ?> </span><br/>
+                TimeStamp: <span> <?php echo $entry['timestamp']; ?> </span><br/>
 
                 <br/><input type="submit" value="Submit">
                 <input type="reset" value="Reset"/>
