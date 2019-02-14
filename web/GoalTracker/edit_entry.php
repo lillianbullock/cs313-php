@@ -34,7 +34,7 @@
                             ON g.goal_id = e.goal_id;");
                 $entry = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-                var_dump($entry);
+                var_dump($entry[0]);
 
                 ?>
 
