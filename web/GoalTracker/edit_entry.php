@@ -41,7 +41,7 @@
                 Goal name: <span> <?php $entry['name']; ?> </span><br/>
 
                 <span id="nameError" class="error">Empty Field</span><br/>
-                Input: <input type="text" id="entry" name="entry" value="<?php $entry['input'] ?>"
+                Input: <input type="text" id="entry" name="entry" value="<?php echo $entry['input']; ?>"
                 onchange="validateText('entry', 'entryError')"><br>
             
                 TimeStamp: <span> <?php $entry['timestamp']; ?> </span><br/>
