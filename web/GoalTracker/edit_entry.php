@@ -32,9 +32,9 @@
                             , e.timestamp 
                             FROM goal g JOIN goal_entry e 
                             ON g.goal_id = e.goal_id;");
-                $entry = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-                var_dump($entry[0]);
+                $bEntry = $statement->fetchAll(PDO::FETCH_ASSOC);
+                $entry = $bEntry[0];
+                var_dump($entry);
 
                 ?>
 
