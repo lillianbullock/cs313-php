@@ -28,7 +28,7 @@
         foreach ($db->query("SELECT owner from goal where goal_id = $id;") as $row)
         {
             var_dump($row);
-            if (row['owner'] != 1) {// TODO replace when login working 
+            if ($row['owner'] != 1) {// TODO replace when login working 
                 echo "You don't have permission to delete this goal";
                 //$valid = false;
             }
