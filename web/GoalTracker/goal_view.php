@@ -78,7 +78,7 @@
                 <input type="submit" value="Share">
             </form> 
 
-            <form action="/GoalTracker/delete_goal_confirm.php" method="POST">
+            <form action="/GoalTracker/delete_g_confirm.php" method="POST">
                 <?php
                 echo '<input type="hidden" name="goal_id" value="';
                 echo $_POST['goal_id'];
