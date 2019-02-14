@@ -78,9 +78,7 @@
                 <input type="submit" value="Share">
             </form> 
 
-            <!-- TODO create a delete_goal -->
-            <!-- should have a 'yes I understand that I am deleting literally everything' checkbox-->
-            <form action="/GoalTracker/delete_goal.php" method="POST">
+            <form action="/GoalTracker/delete_goal_confirmation.php" method="POST">
                 <?php
                 echo '<input type="hidden" name="goal_id" value="';
                 echo $_POST['goal_id'];
