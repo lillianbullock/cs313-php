@@ -97,7 +97,6 @@ function validateCreateGoal() {
         setFocus("name");
         return false;
     }
-
     return true;
 }
 
@@ -109,7 +108,7 @@ function validateEditEntry() {
         setFocus("entry");
         return false;
     }
-
+    return true;
 }
 
 /*
@@ -149,3 +148,4 @@ function validateAll() {
     return true;
 }
 */
+
