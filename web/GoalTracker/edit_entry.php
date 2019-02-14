@@ -34,7 +34,7 @@
                             ON g.goal_id = e.goal_id;");
                 $bEntry = $statement->fetchAll(PDO::FETCH_ASSOC);
                 $entry = $bEntry[0];
-                var_dump($entry);
+                //var_dump($entry);
 
                 ?>
 
@@ -42,7 +42,7 @@
 
                 <span id="nameError" class="error">Empty Field</span><br/>
                 Input: <input type="text" id="entry" name="entry" value="<?php echo $entry['input']; ?>"
-                onchange="validateText('entry', 'entryError')"><br>
+                onchange="validateText('entry', 'entryError')"><br><br/>
             
                 TimeStamp: <span> <?php echo $entry['timestamp']; ?> </span><br/>
 
