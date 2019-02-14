@@ -38,7 +38,7 @@
 
                 ?>
 
-                Goal name: <span> <?php echo $entry['name']; ?> </span><br/>
+                Goal name: <span> <?php echo $entry['name']; ?> </span><br/><br/>
 
                 Input: <input type="text" id="entry" name="entry" value="<?php echo $entry['input']; ?>"
                 onchange="validateText('entry', 'entryError')">
