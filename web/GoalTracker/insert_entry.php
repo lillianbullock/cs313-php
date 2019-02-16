@@ -32,7 +32,7 @@
                                 ( goal_id, input, timestamp)
                                 VALUES ( :goal_id
                                 , :input
-                                , SYSDATE);");
+                                , Now());");
             $stmt->execute(array('goal_id' => $_POST['goal_id']
                                 , 'input' => $_POST['input'] ));
 
