@@ -42,7 +42,7 @@
             //echo "New Id is  ", $newId;
 
         } catch (exception $e) {
-            echo "The insert failed";
+            echo "The insert failed $e";
         }
         ?>
 
