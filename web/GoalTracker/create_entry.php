@@ -24,13 +24,15 @@
             onsubmit="return validateCreateEntry()" onreset="reseterrors()"
             >
                 <?php 
+                $Gid = $_POST['goal_id'];
                 $statement = $db->query("SELECT name
                                         , entry_type
                                         , frequency_type
-                                        FROM goal;");
+                                        FROM goal
+                                        WHERE goal_id = $Gid;");
                 $bEntry = $statement->fetchAll(PDO::FETCH_ASSOC);
                 $entry = $bEntry[0];
-                
+
                 var_dump($bEntry);
                 var_dump($entry);
                 
