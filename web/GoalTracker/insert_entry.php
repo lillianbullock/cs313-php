@@ -34,7 +34,7 @@
                                 , :input
                                 , Now());");
             $stmt->execute(array('goal_id' => $_POST['goal_id']
-                                , 'input' => $_POST['input'] ));
+                                , 'input' => $_POST['entry'] ));
 
             echo "Row inserted";
 
