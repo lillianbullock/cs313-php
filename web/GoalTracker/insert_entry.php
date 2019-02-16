@@ -23,6 +23,8 @@
         
         <?php
 
+        var_dump($_POST);
+
         try {
         // inserts the received goal, and if it fails deals with the
         // exception instead of just breaking the page
