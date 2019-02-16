@@ -32,60 +32,18 @@
                                         WHERE goal_id = $Gid;");
                 $bEntry = $statement->fetchAll(PDO::FETCH_ASSOC);
                 $entry = $bEntry[0];
-
-                var_dump($bEntry);
-                echo '<br/>';
-                var_dump($entry);
                 
                 ?>
 
-                Goal name:
-                <span id="nameError" class="error">Empty Field</span><br/>
-                <!-- TODO remove default value for production-->
-                <input type="text" id="name" name="name" value="Test"
-                onchange="validateText('name', 'nameError')"><br>
-            
-                <br>Frequency:
-                <span id="frequencyError" class="error">Empty Field</span><br/>
+                Goal name: <?php echo $entry['name']; ?><br/>
 
-                <select id="frequency" name="frequency"
-                onchange="validateDropDown('frequency', 'frequencyError')">
-                    <option value="none">Choose One</option>
-                    <?php
-                    // gets all the possible frequencies
-                    foreach ($db->query("SELECT common_lookup_id, label 
-                                        FROM common_lookup 
-                                        WHERE column_name = 'FREQUENCY_TYPE'
-                                        AND table_name = 'GOAL';") as $row) {
-                        echo '<option value="';
-                        echo $row['common_lookup_id'];
-                        echo '">';
-                        echo $row['label']; 
-                        echo "</option>\n";
-                    }
-                    ?>
-                </select><br/>
-                
-                <br>Input Type:
+                Entry: 
                 <span id="entryError" class="error">Empty Field</span><br/>
-
-                <select id="entry" name="entry"
-                onchange="validateDropDown('entry', 'entryError')">
-                    <option value="none">Choose One</option>
-                    <?php
-                    // gets all the possible frequencies
-                    foreach ($db->query("SELECT common_lookup_id, label 
-                                        FROM common_lookup 
-                                        WHERE column_name = 'ENTRY_TYPE' 
-                                        AND table_name = 'GOAL';") as $row) {
-                        echo '<option value="';
-                        echo $row['common_lookup_id'];
-                        echo '">';
-                        echo $row['label']; 
-                        echo "</option>\n";
-                    }
-                    ?>
-                </select><br/>
+                <!-- TODO remove default value for production-->
+                <input type="text" id="entry" name="entry"
+                onchange="validateText('entry', 'entryError')"><br>
+            
+                Date: <?php echo date("d/m/Y"); ?>
 
                 <br/><input type="submit" value="Submit">
                 <input type="reset" value="Reset"/>
