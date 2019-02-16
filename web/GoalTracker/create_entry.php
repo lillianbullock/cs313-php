@@ -20,7 +20,7 @@
         ?>
 
         <div class='centre purple'>
-            <form action="insert_goal.php" method="POST" class="centre"
+            <form action="insert_entry.php" method="POST" class="centre"
             onsubmit="return validateCreateEntry()" onreset="reseterrors()"
             >
                 <?php 
@@ -35,15 +35,15 @@
                 
                 ?>
 
-                Goal name: <?php echo $entry['name']; ?><br/>
+                Goal name: <?php echo $entry['name']; ?><br/><br/>
 
                 Entry: 
                 <span id="entryError" class="error">Empty Field</span><br/>
                 <!-- TODO remove default value for production-->
                 <input type="text" id="entry" name="entry"
-                onchange="validateText('entry', 'entryError')"><br>
+                onchange="validateText('entry', 'entryError')"><br><br/>
             
-                Date: <?php echo date("d/m/Y"); ?>
+                Date: <?php echo date("d/m/Y"); ?><br/>
 
                 <br/><input type="submit" value="Submit">
                 <input type="reset" value="Reset"/>
