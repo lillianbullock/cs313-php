@@ -21,7 +21,10 @@
 
         <div class='centre purple'>
         
+
+
         <?php
+        $id = $_POST['goal_id'];
         foreach ($db->query("SELECT owner from goal where goal_id = $id;") as $row)
         {
             var_dump($row);
