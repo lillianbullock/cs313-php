@@ -39,7 +39,7 @@
                                 WHERE goal_id = :goal_id;');
             $stmt->execute(array(':goal_id' => $_POST['goal_id']));
             
-            echo 'Deleted';
+            echo 'Goal Deleted';
         } catch (exception $e) {
             echo "The delete failed";
         }
