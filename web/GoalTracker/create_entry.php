@@ -34,6 +34,7 @@
                 $entry = $bEntry[0];
 
                 var_dump($bEntry);
+                echo '<br/>';
                 var_dump($entry);
                 
                 ?>
