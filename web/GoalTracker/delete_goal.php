@@ -27,17 +27,17 @@
             // delete access rows
             $stmt = $db->prepare('DELETE from access
                                 WHERE goal_id = :goal_id;');
-            $stmt->execute(array(':person_id' => $_POST['goal_id'])); 
+            $stmt->execute(array(':goal_id' => $_POST['goal_id'])); 
                         
             // delete goal_entry rows      
             $stmt = $db->prepare('DELETE from goal_entry
                                 WHERE goal_id = :goal_id;');
-            $stmt->execute(array(':person_id' => $_POST['goal_id']));
+            $stmt->execute(array(':goal_id' => $_POST['goal_id']));
 
             // delete the goal row      
             $stmt = $db->prepare('DELETE from goal
                                 WHERE goal_id = :goal_id;');
-            $stmt->execute(array(':person_id' => $_POST['goal_id']));
+            $stmt->execute(array(':goal_id' => $_POST['goal_id']));
             
             echo 'Deleted';
         } catch (exception $e) {
