@@ -24,6 +24,8 @@
 
 
         <?php
+        var_dump($_POST);
+
         $id = $_POST['goal_id'];
         foreach ($db->query("SELECT owner from goal where goal_id = $id;") as $row)
         {
