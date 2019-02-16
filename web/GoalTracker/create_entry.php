@@ -23,6 +23,11 @@
             <form action="insert_entry.php" method="POST" class="centre"
             onsubmit="return validateCreateEntry()" onreset="reseterrors()"
             >
+            <!-- TODO create the js validation --> 
+
+                <input type="hidden" name="goal_id"
+                value=" <?php echo $_POST['goal_id']; ?> ">
+
                 <?php 
                 $Gid = $_POST['goal_id'];
                 $statement = $db->query("SELECT name
@@ -32,7 +37,6 @@
                                         WHERE goal_id = $Gid;");
                 $bEntry = $statement->fetchAll(PDO::FETCH_ASSOC);
                 $entry = $bEntry[0];
-                
                 ?>
 
                 Goal name: <?php echo $entry['name']; ?><br/><br/>
@@ -43,6 +47,7 @@
                 <input type="text" id="entry" name="entry"
                 onchange="validateText('entry', 'entryError')"><br><br/>
             
+                <!-- add date picker? -->
                 Date: <?php echo date("d/m/Y"); ?><br/>
 
                 <br/><input type="submit" value="Submit">
