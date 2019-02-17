@@ -37,8 +37,7 @@
                                 JOIN common_lookup cl2 
                                 ON frequency_type = cl2.common_lookup_id
                                 WHERE owner = :person_id;');
-            // TODO get from session when login working
-            $stmt->execute(array(':person_id' => 1)); 
+            $stmt->execute(array(':person_id' => $_SESSION['user_id'])); 
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             ?>
 
@@ -73,8 +72,12 @@
             </table>
             <br/>
 
+            <span>Shared with Me</span>
+            <table class='centre'>
+            <tr><th>Goal Name</th><th>Type</th><th>Frequency</th></tr>
+
             <?php
-            // TODO add list of accessible goals along with your goals
+            // list of accessible goals along with your goals
             $stmt = $db->prepare('Select g.goal_id
                                 , g.name
                                 , cl1.label as entry_type
@@ -86,14 +89,9 @@
                         ON entry_type = cl1.common_lookup_id
                         JOIN common_lookup cl2 
                         ON frequency_type = cl2.common_lookup_id;');
-            // TODO get from session when login working
-            $stmt->execute(array(':person_id' => 1)); 
+            $stmt->execute(array(':person_id' => $_SESSION['user_id'])); 
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             ?>
-
-            <span>Shared with Me</span>
-            <table class='centre'>
-            <tr><th>Goal Name</th><th>Type</th><th>Frequency</th></tr>
 
             <?php
             foreach ($rows as $row)

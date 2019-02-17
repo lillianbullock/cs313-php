@@ -26,12 +26,11 @@
 
 
         <?php
-    var_dump($_SESSION);
 
         $id = $_POST['goal_id'];
         foreach ($db->query("SELECT owner from goal where goal_id = $id;") as $row)
         {
-            if ($row['owner'] != $_SESSION['user_id']) {// TODO replace when login working 
+            if ($row['owner'] != $_SESSION['user_id']) { 
                 echo "You don't have permission to delete this goal";
             }
             else {
