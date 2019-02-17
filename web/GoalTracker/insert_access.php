@@ -32,7 +32,7 @@
                                 FROM person 
                                 WHERE email = :email)
                                 , :goal_id
-                                , false;");
+                                , false);");
             $stmt->execute(array('email' => $_POST['email']
                                 , 'goal_id' => $_POST['goal_id'] ));
 
