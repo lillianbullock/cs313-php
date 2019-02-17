@@ -35,7 +35,8 @@
                                         WHERE goal_id = $Gid;");
                 $bEntry = $statement->fetchAll(PDO::FETCH_ASSOC);
                 $entry = $bEntry[0];
-                Goal name: <?php echo $entry['name']; ?><br/><br/>
+                ?>
+                Goal name: <?php echo $entry['name']; ?> <br/><br/>
 
                 Email user to share with: 
                 <span id="emailError" class="error">Empty Field</span><br/>
