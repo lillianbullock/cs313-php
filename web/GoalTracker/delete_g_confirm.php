@@ -22,8 +22,6 @@
         ?>
 
         <div class='centre purple'>
-        
-
 
         <?php
 
