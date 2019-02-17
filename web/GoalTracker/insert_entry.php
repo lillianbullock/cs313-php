@@ -44,6 +44,7 @@
         }
         ?>
 
+        <br/>
         <form action="/GoalTracker/goal_view.php" method="POST">
                 <?php
                 echo '<input type="hidden" name="goal_id" value="';
