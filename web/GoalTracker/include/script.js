@@ -111,6 +111,17 @@ function validateEditEntry() {
     return true;
 }
 
+function validateCreateEntry() {
+    var entry = document.getElementById("entry").value;
+    
+    if (entry.length == 0) {
+        setVisible("entryError");
+        setFocus("entry");
+        return false;
+    }
+    return true;
+}
+
 /*
 function validateAll() {
     var firstN = document.getElementById("firstN").value;

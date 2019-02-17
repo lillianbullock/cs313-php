@@ -24,28 +24,15 @@
             onsubmit="return validateCreateEntry()" onreset="reseterrors()"
             >
             <!-- TODO create the js validation --> 
-
-                <input type="hidden" name="goal_id"
-                value=" <?php echo $_POST['goal_id']; ?> ">
-
-                <?php 
-                $Gid = $_POST['goal_id'];
-                $statement = $db->query("SELECT name
-                                        , entry_type
-                                        , frequency_type
-                                        FROM goal
-                                        WHERE goal_id = $Gid;");
-                $bEntry = $statement->fetchAll(PDO::FETCH_ASSOC);
-                $entry = $bEntry[0];
-                ?>
-
                 Goal name: <?php echo $entry['name']; ?><br/><br/>
 
-                Entry: 
-                <span id="entryError" class="error">Empty Field</span><br/>
-                <input type="text" id="entry" name="entry"
-                onchange="validateText('entry', 'entryError')"><br><br/>
-            
+                Email user to share with: 
+                <span id="emailError" class="error">Empty Field</span><br/>
+                <input type="email" id="email" name="email"
+                onchange="validateText('email', 'emailError')"><br><br/>
+                
+                <!-- make it so can edit is a changeable field --> 
+                Can edit: No
                 
                 <br/><input type="submit" value="Submit">
                 <input type="reset" value="Reset"/>
