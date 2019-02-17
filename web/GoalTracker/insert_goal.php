@@ -35,7 +35,7 @@
                                 , :entry_type
                                 , :frequency_type );");
             $stmt->execute(array('name' => $_POST['name']
-                                , 'owner' => '1' // TODO get from session when login working
+                                , 'owner' => $_SESSION['user_id']
                                 , 'entry_type' => $_POST['entry']
                                 , 'frequency_type' => $_POST['frequency']));
 

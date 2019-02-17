@@ -113,7 +113,6 @@
             }
             
             echo "</table>";
-            // TODO add list of accessible goals along with your goals
             ?> 
 
 

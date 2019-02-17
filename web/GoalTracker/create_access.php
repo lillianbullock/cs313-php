@@ -43,13 +43,10 @@
 
                 Entry: 
                 <span id="entryError" class="error">Empty Field</span><br/>
-                <!-- TODO remove default value for production-->
                 <input type="text" id="entry" name="entry"
                 onchange="validateText('entry', 'entryError')"><br><br/>
             
-                <!-- TODO add date picker? -->
-                Date: <?php echo date("d/m/Y"); ?><br/>
-
+                
                 <br/><input type="submit" value="Submit">
                 <input type="reset" value="Reset"/>
             </form>

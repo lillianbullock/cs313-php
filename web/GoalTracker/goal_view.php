@@ -44,7 +44,6 @@
             foreach ($rows as $row)
             {
                 echo '<tr><td>';
-                // TODO entry_edit to be made later
                 echo '<form action="/GoalTracker/edit_entry.php" method="POST">';
                 echo '<input type="hidden" name="g_entry_id" value="';
                 echo $row['g_entry_id'];
@@ -58,7 +57,6 @@
             echo "</table>";
             ?>
 
-            <!-- TODO create a create_entry & insert_entry -->
             <form action="/GoalTracker/create_entry.php" method="POST">
                 <?php
                 echo '<input type="hidden" name="goal_id" value="';
@@ -68,7 +66,6 @@
                 <input type="submit" value="Add a New Entry">
             </form> 
 
-            <!-- TODO create a create_access & insert_access -->
             <form action="/GoalTracker/create_access.php" method="POST">
                 <?php
                 echo '<input type="hidden" name="goal_id" value="';

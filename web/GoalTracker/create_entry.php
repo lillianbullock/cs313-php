@@ -43,7 +43,6 @@
 
                 Entry: 
                 <span id="entryError" class="error">Empty Field</span><br/>
-                <!-- TODO remove default value for production-->
                 <input type="text" id="entry" name="entry"
                 onchange="validateText('entry', 'entryError')"><br><br/>
             
