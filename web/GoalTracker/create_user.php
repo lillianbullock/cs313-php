@@ -34,10 +34,10 @@
                 onchange="validateText('email', 'emailError')"><br>
 
                 Password:
-                <span id="passError" class="error">Empty Field</span><br/>
+                <span id="passError" class="error">Password fields must match</span><br/>
                 
                 <input type="password" id="pass1" name="pass1"><br><br>
-
+                Verify Password:
                 <input type="password" id="pass2" name="pass2"
                 onchange="validatePass('pass1', 'pass2', 'passError')"><br>
 
