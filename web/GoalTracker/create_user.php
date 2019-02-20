@@ -24,9 +24,9 @@
             onsubmit="return validateCreateGoal()" onreset="reseterrors()"
             >
                 Name:
-                <span id="fnameError" class="error">Empty Field</span><br/>
-                <input type="text" id="fname" name="fname"
-                onchange="validateText('fname', 'fnameError')"><br>
+                <span id="nameError" class="error">Empty Field</span><br/>
+                <input type="text" id="name" name="name"
+                onchange="validateText('name', 'nameError')"><br>
 
                 Email:
                 <span id="emailError" class="error">Empty Field</span><br/>
@@ -36,7 +36,7 @@
                 Password:
                 <span id="passError" class="error">Empty Field</span><br/>
                 
-                <input type="password" id="pass1" name="pass1"><br>
+                <input type="password" id="pass1" name="pass1"><br><br>
 
                 <input type="password" id="pass2" name="pass2"
                 onchange="validatePass('pass1', 'pass2', 'passError')"><br>
