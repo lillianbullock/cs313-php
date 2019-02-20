@@ -12,9 +12,9 @@ CREATE TABLE common_lookup
 
 CREATE TABLE person 
 ( person_id 	serial	   PRIMARY KEY
-, f_name 	varchar(20)	   NOT NULL
-, l_name    varchar(20)    NOT NULL
+, username 	varchar(20)	   NOT NULL
 , email     varchar(20)    NOT NULL
+, password varchar(255)
 );
 
 ALTER TABLE person ADD CONSTRAINT unique_person_email UNIQUE (email);
