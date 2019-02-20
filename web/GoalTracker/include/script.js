@@ -36,6 +36,16 @@ function validateText(text, texterror) {
     else setHidden(texterror);
 }
 
+function validatePass(pass1, pass2, passErr) {
+    var p1 = document.getElementById(pass1).value;
+    var p2 = document.getElementById(pass2).value;
+
+    if (p1.length == 0 || p2.length == 0 || p1 != p2) {
+        setVisible(passErr);
+    }
+    else setHidden(passErr);
+}
+
 /*
 function validateRadio (radio, radioError) {
     var data = document.getElementById(radio).value;
