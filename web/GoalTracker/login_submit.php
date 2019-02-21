@@ -31,13 +31,13 @@
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         //var_dump($rows);
-        var_dump($_POST['password']);
+        $pass = $_POST['password'];
 
 
         var_dump($rows[0]['password']);
 
 
-        if (password_verify($_POST['password'], $rows[0]['password'])) {
+        if (!is_null($pass) && password_verify($pass, $rows[0]['password'])) {
             $_SESSION['user_id'] = $rows[0]['person_id'];
             $_SESSION['name'] = $rows[0]['username'];
             echo "login successful. Welcome ";
