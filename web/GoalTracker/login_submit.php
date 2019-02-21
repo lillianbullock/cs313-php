@@ -24,7 +24,7 @@
         <div class='centre purple'>
         
         <?php
-        $stmt = $db->prepare('SELECT password, person_id, username
+        $stmt = $db->prepare('SELECT person_id, password, username
                 FROM person
                 WHERE email = :email;');
         $stmt->execute(array(':email' => $_POST['email'])); 
@@ -32,7 +32,7 @@
 
         var_dump($rows);
 
-        if (password_verify($rows[0]['password'], $_POST['password'])) {
+        if (password_verify($_POST['password'], $rows[0]['password'])) {
             $_SESSION['user_id'] = $rows['person_id'];
             $_SESSION['name'] = $rows['username'];
             echo "login successful. Welcome ";
