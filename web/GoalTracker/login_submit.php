@@ -30,7 +30,7 @@
         $stmt->execute(array(':email' => $_POST['email'])); 
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        var_dump($rows);
+        //var_dump($rows);
 
         if (password_verify($_POST['password'], $rows[0]['password'])) {
             $_SESSION['user_id'] = $rows['person_id'];
