@@ -22,7 +22,7 @@
         <!-- TODO add js to validate this form -->
 
         <div class='centre purple'>
-            <form action="login.php" class='centre' method="POST">
+            <form action="login_submit.php" class='centre' method="POST">
                 Email:<br>
                 <input type="email" name="email"><br/><br/>
 
