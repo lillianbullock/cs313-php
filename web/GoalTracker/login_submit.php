@@ -36,7 +36,7 @@
         var_dump($pass);
         var_dump($hash);
 
-        if (!is_null($pass) && !($pass == '') && password_verify($pass, $hash)) {
+        if (!is_null($pass) && $pass != '' && password_verify($pass, $hash)) {
             $_SESSION['user_id'] = $rows[0]['person_id'];
             $_SESSION['name'] = $rows[0]['username'];
             echo "login successful. Welcome ";
