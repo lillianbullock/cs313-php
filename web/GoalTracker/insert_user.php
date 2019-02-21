@@ -33,10 +33,10 @@
             // exception instead of just breaking the page
                 $stmt = $db->prepare("INSERT INTO person
                                     ( username, email, password)
-                                    VALUES ( :username
+                                    VALUES ( :name
                                     , :email
                                     , :password );");
-                $stmt->execute(array( 'username' => $_POST['username']
+                $stmt->execute(array( 'name' => $_POST['name']
                                     , 'email' => $$_POST['email']
                                     , 'password' => $passwordHash));
 
