@@ -31,7 +31,7 @@
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         //var_dump($rows);
-        var_dump($_POST['pass1']);
+        var_dump($_POST['password']);
 
 
         var_dump($rows[0]['password']);
