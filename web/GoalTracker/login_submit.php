@@ -36,9 +36,9 @@
             $_SESSION['user_id'] = $rows[0]['person_id'];
             $_SESSION['name'] = $rows[0]['username'];
             echo "login successful. Welcome ";
-            echo $_SESSION['name'];
+            echo $_SESSION['name']; 
 
-            echo '<form action="/GoalTracker/goal_list.php">';
+            echo '<br/><form action="/GoalTracker/goal_list.php">';
             echo '<input type="submit" value="Goal List">';
             echo '</form>';
 
