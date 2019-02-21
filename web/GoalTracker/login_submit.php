@@ -33,8 +33,8 @@
         //var_dump($rows);
 
         if (password_verify($_POST['password'], $rows[0]['password'])) {
-            $_SESSION['user_id'] = $rows['person_id'];
-            $_SESSION['name'] = $rows['username'];
+            $_SESSION['user_id'] = $rows[0]['person_id'];
+            $_SESSION['name'] = $rows[0]['username'];
             echo "login successful. Welcome ";
             echo $_SESSION['name'];
         } else {
