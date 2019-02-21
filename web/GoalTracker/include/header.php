@@ -13,8 +13,8 @@
         // logged in or nah message
         echo '<div class="rightFloat">';
         if (isset($_SESSION['name'])) {
-            echo 'Welcome' , $_SESSION['name'];
-            echo '<a href="logout.php">Logout</a>', "\n";
+            echo 'Welcome ' , $_SESSION['name'];
+            echo '<br/><a href="logout.php">Logout</a>', "\n";
         } else {
             echo 'You are not logged in <br/>';
             echo '<a href="login.php">Login</a>', "\n";
