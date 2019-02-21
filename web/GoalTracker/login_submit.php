@@ -33,7 +33,7 @@
         //var_dump($rows);
         $pass = $_POST['password'];
 
-
+        var_dump($pass);
         var_dump($rows[0]['password']);
 
 
