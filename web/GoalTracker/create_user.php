@@ -20,7 +20,7 @@
         ?>
 
         <div class='centre purple'>
-            <form action="insert_goal.php" method="POST" class="centre"
+            <form action="insert_user.php" method="POST" class="centre"
             onsubmit="return validateCreateGoal()" onreset="reseterrors()"
             >
                 Name:
