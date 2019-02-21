@@ -31,6 +31,11 @@
 
                 <input type="submit" value="Login">
             </form>
+
+            <form action="/GoalTracker/create_user.php">
+                <input type="submit" value="Create new account">
+            </form> 
+
         </div>
 
         <?php require 'include/footer.php'; ?>
