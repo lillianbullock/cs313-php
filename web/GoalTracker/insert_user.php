@@ -26,7 +26,8 @@
             echo "Your Passwords did not match";
         } else {
 
-            $passwordHash = password_hash($_POST['Pass1'], PASSWORD_DEFAULT);
+            var_dump($_POST['pass1']);
+            $passwordHash = password_hash($_POST['pass1'], PASSWORD_DEFAULT);
 
             try {
             // inserts, and if it fails deals with the
@@ -51,7 +52,7 @@
         }
         ?>
 
-        
+
 
         </div>
 
