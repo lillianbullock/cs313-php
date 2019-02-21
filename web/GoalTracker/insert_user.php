@@ -37,7 +37,7 @@
                                     , :email
                                     , :password );");
                 $stmt->execute(array( 'name' => $_POST['name']
-                                    , 'email' => $$_POST['email']
+                                    , 'email' => $_POST['email']
                                     , 'password' => $passwordHash));
 
                 echo "Row inserted";
