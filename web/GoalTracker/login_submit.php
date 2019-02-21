@@ -37,8 +37,17 @@
             $_SESSION['name'] = $rows[0]['username'];
             echo "login successful. Welcome ";
             echo $_SESSION['name'];
+
+            echo '<form action="/GoalTracker/goal_list.php">';
+            echo '<input type="submit" value="Goal List">';
+            echo '</form>';
+
         } else {
             echo 'login failed';
+
+            echo '<form action="/GoalTracker/login.php">';
+            echo '<input type="submit" value="Try Again">';
+            echo '</form>';
         }
 
         $_SESSION['user_id'] = 1;
