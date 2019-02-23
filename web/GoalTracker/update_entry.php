@@ -43,6 +43,8 @@
             echo "The insert failed";
         }
         ?>
+        
+        </div>
 
         <?php require 'include/footer.php'; ?>
     </body>

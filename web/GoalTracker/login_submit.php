@@ -52,7 +52,7 @@
             echo '</form>';
         }
 
-        $_SESSION['user_id'] = 1;
+        //$_SESSION['user_id'] = 1;
         ?>
 
         </div>
