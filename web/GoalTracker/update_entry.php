@@ -44,15 +44,6 @@
         }
         ?>
 
-            <form action="/GoalTracker/goal_view.php" method="POST">
-                <?php
-                echo '<input type="hidden" name="goal_id" value="';
-                echo $_POST['goal_id'];
-                echo '">';
-                ?>
-                <input type="submit" value="Return to Goal">
-            </form> 
-
         <?php require 'include/footer.php'; ?>
     </body>
 </html>
