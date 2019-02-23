@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="include/style.css">
             <meta charset = "utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home</title>
+        <title>Entry</title>
       
         <!--internal style sheets-->
         <style> </style>
@@ -38,10 +38,10 @@
                 echo '<form action="/GoalTracker/delete_goal.php" method="POST">';
                 echo '<input type="hidden" id="goal_id" name="goal_id" value="';
                 echo $id;
-                echo '"><input class="purplebutton" type="submit" value="Yes"></form>';
+                echo '"><input type="submit" value="Yes"></form>';
 
                 echo '<form action="/GoalTracker/goal_list.php" method="POST">';
-                echo '<input class="purplebutton" type="submit" value="No"></form>';
+                echo '<input type="submit" value="No"></form>';
             }
         }
         ?>

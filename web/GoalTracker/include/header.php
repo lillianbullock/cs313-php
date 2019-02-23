@@ -7,7 +7,7 @@
     // Webpage title
     echo '<span class="title">Goal Tracker</span><br/>', "\n";
 
-    if ($page == 'login.php' || $page == 'login_submit.php'){
+    if ($page == 'login.php' || $page == 'login_submit.php' || $page == 'logout.php'){
         // this is just a placeholder in case I want to put something here
         echo '<div class="rightFloat"></div>';
     } else {
