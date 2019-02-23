@@ -33,8 +33,8 @@
             // inserts, and if it fails deals with the
             // exception instead of just breaking the page
                 $stmt = $db->prepare("INSERT INTO person
-                                    ( username, email, password)
-                                    VALUES ( :name
+                                    ( person_id, username, email, password)
+                                    VALUES ( 1, :name
                                     , :email
                                     , :password );");
                 $stmt->execute(array( 'name' => $_POST['name']
