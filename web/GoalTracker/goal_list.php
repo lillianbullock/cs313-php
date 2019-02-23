@@ -26,7 +26,7 @@
         
             <?php
 
-            $_SESSION['user_id'] = 1;
+            //$_SESSION['user_id'] = 1;
 
             $stmt = $db->prepare('Select g.goal_id
                                 , g.name
