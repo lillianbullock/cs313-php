@@ -36,6 +36,11 @@
         don’t delete any pre-existing information, though you can delete
         anything that you create.</p>
 
+        <p>
+        Email: jam@dud.com <br/>
+        Password: fred<p>
+
+
 
         <form action="/GoalTracker/goal_list.php">
             <input type="submit" value="Goal List">
