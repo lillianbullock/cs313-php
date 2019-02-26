@@ -28,22 +28,23 @@
 
                 $g_entry_id = $_POST['g_entry_id'];
 
+                var_dump($_POST);
+
                 $statement = $db->query("select g.name
                             , e.g_entry_id
                             , e.input
                             , e.timestamp 
                             FROM goal g JOIN goal_entry e 
                             ON g.goal_id = e.goal_id
-                            WHERE goal_id = $g_entry_id;");
+                            WHERE goal_entry_id = $g_entry_id;");
                 $bEntry = $statement->fetchAll(PDO::FETCH_ASSOC);
-                $entry = $bEntry[0];
-                //var_dump($entry);
-
+                $entry = $bEntry[0];  
                 ?>
 
                 Goal name: <span> <?php echo $entry['name']; ?> </span><br/><br/>
 
-                Input: <input type="text" id="entry" name="entry" value="<?php echo $entry['input']; ?>"
+                Input: <input type="text" id="entry" name="entry" 
+                    value="<?php echo $entry['input']; ?>"
                 onchange="validateText('entry', 'entryError')">
                 <span id="entryError" class="error">Empty Field</span><br><br/>
             

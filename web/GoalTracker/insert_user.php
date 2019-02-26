@@ -26,7 +26,6 @@
             echo "Your Passwords did not match";
         } else {
 
-            var_dump($_POST['pass1']);
             $passwordHash = password_hash($_POST['pass1'], PASSWORD_DEFAULT);
 
             try {

@@ -30,7 +30,6 @@
         $stmt->execute(array(':email' => $_POST['email'])); 
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        //var_dump($rows);
         $pass = filter_var($_POST['password']);
         $hash = $rows[0]['password'];
         
