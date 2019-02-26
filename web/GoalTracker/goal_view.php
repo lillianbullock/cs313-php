@@ -45,6 +45,9 @@
             {
                 echo '<tr><td>';
                 echo '<form action="/GoalTracker/edit_entry.php" method="POST">';
+                echo '<input type="hidden" name="goal_id" value="';
+                echo $row['goal_id'];
+                echo '">';
                 echo '<input type="hidden" name="g_entry_id" value="';
                 echo $row['g_entry_id'];
                 echo '"><input class="purplebutton" type="submit" value="';

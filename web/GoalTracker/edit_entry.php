@@ -26,7 +26,7 @@
 
                 <?php
 
-                $goal_id = $_POST['goal_id'];
+                $g_entry_id = $_POST['g_entry_id'];
 
                 $statement = $db->query("select g.name
                             , e.g_entry_id
@@ -34,7 +34,7 @@
                             , e.timestamp 
                             FROM goal g JOIN goal_entry e 
                             ON g.goal_id = e.goal_id
-                            WHERE goal_id = $goal_id;");
+                            WHERE goal_id = $g_entry_id;");
                 $bEntry = $statement->fetchAll(PDO::FETCH_ASSOC);
                 $entry = $bEntry[0];
                 //var_dump($entry);
