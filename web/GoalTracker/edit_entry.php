@@ -28,8 +28,6 @@
 
                 $g_entry_id = $_POST['g_entry_id'];
 
-                var_dump($_POST);
-
                 $statement = $db->query("select g.name
                             , e.g_entry_id
                             , e.input
@@ -38,8 +36,6 @@
                             ON g.goal_id = e.goal_id
                             WHERE e.g_entry_id = $g_entry_id;");
                 $bEntry = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-                var_dump($bEntry);
 
                 $entry = $bEntry[0];  
                 ?>
