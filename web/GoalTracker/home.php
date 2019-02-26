@@ -21,24 +21,8 @@
         
         <div class="centre purple">
 
-        <p>It is a goal tracking system. You can create goals, track progress
+        <p>This is a goal tracking system. You can create goals, track progress
         and share the goals with other users. </p>
-
-        <p>Login and then go to the goal_list. From there you can click on a
-        goal to view it, or create a new goal. </p>
-
-        <p>From each goal, you can delete the goal (which also deletes access
-        and entries), add an entry, or share a goal with another user. You can
-        also click on an existing entry to edit it. </p>
-
-        <p>You can use this login that has some existing information, or you
-        can create a new user. I ask that if you login using the below that you
-        don’t delete any pre-existing information, though you can delete
-        anything that you create.</p>
-
-        <p>
-        Email: jam@dud.com <br/>
-        Password: fred<p>
 
 
 
